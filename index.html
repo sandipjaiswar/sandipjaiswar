@@ -49,68 +49,87 @@
             padding: 20px 0;
             font-size: 14px;
         }
+
         /* Mobile Optimization */
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-.hero {
-  padding: 60px 20px;
-  min-height: auto;
-}
+            .hero {
+                padding: 60px 20px;
+                min-height: auto;
+            }
 
-.hero h1 {
-  font-size: 28px;
-  line-height: 1.3;
-}
+            .hero h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
 
-.hero p {
-  font-size: 16px;
-}
+            .hero p {
+                font-size: 16px;
+            }
 
-#leadForm {
-  width: 100% !important;
-}
+            #leadForm {
+                width: 100% !important;
+            }
 
-#leadForm input,
-#leadForm select {
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  border-radius: 10px;
-}
+            #leadForm input,
+            #leadForm select {
+                width: 100%;
+                padding: 14px;
+                font-size: 16px;
+                border-radius: 10px;
+            }
 
-#leadForm button {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  border-radius: 12px;
-}
+            #leadForm button {
+                width: 100%;
+                padding: 16px;
+                font-size: 18px;
+                border-radius: 12px;
+            }
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
 
-}
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
         <div class="container">
+
+            <!-- Logo -->
             <a class="navbar-brand fw-bold" href="#">Sandip Jaiswar</a>
+
+            <!-- Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto mobile-nav">
+
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#testimonials">Results</a></li>
                     <li class="nav-item"><a class="nav-link" href="#youtube">YouTube</a></li>
                     <li class="nav-item"><a class="nav-link" href="#linkedin">LinkedIn</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                    <!-- CTA -->
+                    <li class="nav-item mt-3 mt-lg-0 ms-lg-3">
+                        <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark w-100 w-lg-auto">
+                            Book Call →
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -118,166 +137,314 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container text-center">
-          <h1 class="fw-bold">
-            Not Getting Interview Calls Even After 5–10 Years Experience?
-          </h1>
-      
-          <p class="lead">
-            Download this FREE checklist to fix your resume, positioning, and interview mistakes.
-          </p>
-      
-          <form id="leadForm" class="w-50 mx-auto mt-4">
-  
-            <input 
-              type="email" 
-              id="email"
-              class="form-control mb-3" 
-              placeholder="Enter your email" 
-              name="entry.1926949110"
-              required
-            >
-          
-            <select id="experience" name="entry.2017070308" class="form-control mb-3">
-              <option value="">Select Experience</option>
-              <option value="0-2">0–2</option>
-              <option value="2-5">2–5</option>
-              <option value="5-10">5–10</option>
-              <option value="10+">10+</option>
-            </select>
-          
-            <button type="submit" class="btn btn-dark btn-lg w-100">
-              Download Free Checklist
-            </button>
-          
-          </form>
-      
-          <p class="mt-3 text-muted">
-            + Bonus: Learn how to get 3–5 interview calls in 30 days 🚀
-          </p>
+            <h1 class="fw-bold">
+                Not Getting Interview Calls Even After 5–10 Years Experience?
+            </h1>
+
+            <p class="lead">
+                Download this FREE checklist to fix your resume, positioning, and interview mistakes.
+            </p>
+
+            <form id="leadForm" class="w-50 mx-auto mt-4">
+
+                <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email"
+                    name="entry.1926949110" required>
+
+                <select id="experience" name="entry.2017070308" class="form-control mb-3">
+                    <option value="">Select Experience</option>
+                    <option value="0-2">0–2</option>
+                    <option value="2-5">2–5</option>
+                    <option value="5-10">5–10</option>
+                    <option value="10+">10+</option>
+                </select>
+
+                <button type="submit" class="btn btn-dark btn-lg w-100">
+                    Download Free Checklist
+                </button>
+
+            </form>
+
+            <p class="mt-3 text-muted">
+                + Bonus: Learn how to get 3–5 interview calls in 30 days 🚀
+            </p>
         </div>
-      </section>
+    </section>
 
     <!-- About -->
     <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bold mb-3">About Me</h2>
-                    <p class="text-muted">
-                        I’m <strong>Sandip Jaiswar</strong>, an Engineering Manager and Frontend
-                        specialist with deep expertise in Angular. I help developers and teams
-                        build clean architecture, improve performance, and grow their careers.
-                    </p>
-                </div>
+        <div class="container text-center">
+
+            <h2 class="fw-bold mb-3">About Me</h2>
+
+            <p class="lead">
+                I’m <strong>Sandip Jaiswar</strong> — Engineering Manager with 12+ years of experience helping frontend
+                developers crack interviews and grow into senior roles 🚀
+            </p>
+
+            <p style="max-width: 700px; margin: auto; color:#555;">
+                I’ve seen developers with 5–10+ years of experience struggle to get interview calls — not because of
+                lack of skills, but because of poor positioning, weak resume storytelling, and unclear communication.
+            </p>
+
+            <p class="mt-3" style="max-width: 700px; margin: auto; color:#555;">
+                I help fix that.
+                Through mock interviews, resume optimization, and real-world guidance — I help you get 3–5 interview
+                calls and confidently crack them.
+            </p>
+
+            <div class="mt-4">
+                <span class="badge-skill">Angular</span>
+                <span class="badge-skill">TypeScript</span>
+                <span class="badge-skill">JavaScript</span>
+                <span class="badge-skill">RxJS</span>
+                <span class="badge-skill">System Design</span>
+                <span class="badge-skill">Interview Prep</span>
+                <span class="badge-skill">Mentoring</span>
             </div>
 
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-8 text-center">
-                    <span class="badge-skill">Angular</span>
-                    <span class="badge-skill">TypeScript</span>
-                    <span class="badge-skill">JavaScript</span>
-                    <span class="badge-skill">RxJS</span>
-                    <span class="badge-skill">HTML</span>
-                    <span class="badge-skill">CSS</span>
-                    <span class="badge-skill">WordPress</span>
-                    <span class="badge-skill">Mentoring</span>
-                </div>
+            <div class="mt-4">
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
+                    Book 1:1 Diagnosis →
+                </a>
             </div>
+
         </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="section-padding bg-light">
         <div class="container">
+
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Services</h2>
+                <h2 class="fw-bold">How I Can Help You</h2>
+                <p style="color:#666;">
+                    If you're struggling to get interview calls or crack interviews — this is for you
+                </p>
             </div>
 
             <div class="row g-4">
+
+                <!-- Service 1 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="fw-semibold">Angular Coaching</h5>
-                            <p class="text-muted">
-                                1:1 and group coaching for beginners and professionals.
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold">1:1 Mock Interview & Diagnosis</h5>
+
+                            <p class="text-muted mt-3">
+                                Not getting interview calls or failing interviews?
+                                I’ll analyze your resume, projects, and communication and give you a clear action plan.
                             </p>
+
+                            <p class="fw-semibold mt-3">
+                                ✔ Resume feedback
+                                ✔ Live mock interview
+                                ✔ Clear improvement roadmap
+                            </p>
+
+                            <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark w-100 mt-3">
+                                Book Session →
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Service 2 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="fw-semibold">Frontend Consulting</h5>
-                            <p class="text-muted">
-                                Code review, performance optimization, and architecture design.
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold">Interview Preparation Program</h5>
+
+                            <p class="text-muted mt-3">
+                                Structured guidance to help you confidently crack frontend interviews and move to senior
+                                roles.
                             </p>
+
+                            <p class="fw-semibold mt-3">
+                                ✔ Angular + JS fundamentals
+                                ✔ Real interview questions
+                                ✔ Communication & storytelling
+                            </p>
+
+                            <a href="https://topmate.io/sandip_jaiswar/2020195" class="btn btn-outline-dark w-100 mt-3">
+                                Learn More →
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Service 3 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <h5 class="fw-semibold">Courses & Content</h5>
-                            <p class="text-muted">
-                                Bootcamps, tutorials, and interview preparation resources.
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <div class="card-body text-center">
+                            <h5 class="fw-semibold">Resume & Profile Optimization</h5>
+
+                            <p class="text-muted mt-3">
+                                Your resume is the first filter.
+                                I help you position your experience so recruiters actually shortlist you.
                             </p>
+
+                            <p class="fw-semibold mt-3">
+                                ✔ ATS-friendly resume
+                                ✔ Strong project storytelling
+                                ✔ LinkedIn optimization
+                            </p>
+
+                            <a href="https://topmate.io/sandip_jaiswar/2037517" class="btn btn-outline-dark w-100 mt-3">
+                                Fix My Resume →
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-5">
+                <p class="fw-semibold">
+                    Not sure where you're stuck?
+                </p>
+
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
+                    Book 1:1 Diagnosis →
+                </a>
+
+                <p style="font-size:14px; color:#666; margin-top:10px;">
+                    Limited slots available each week
+                </p>
+            </div>
+
         </div>
     </section>
 
     <!-- YouTube -->
     <section id="youtube" class="section-padding">
         <div class="container">
+
+            <!-- Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">YouTube</h2>
-                <p class="text-muted">Latest Angular & Frontend Videos</p>
+                <h2 class="fw-bold">Learn → Apply → Get Interview Calls</h2>
+                <p class="text-muted">
+                    Watch real interview-focused Angular & Frontend videos
+                </p>
             </div>
 
+            <!-- Video Cards -->
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="ratio ratio-16x9 shadow-sm rounded">
-                        <a href="https://www.youtube.com/watch?v=HSzCqTtEyNE" target="_blank"
-                            class="d-block shadow-sm rounded overflow-hidden">
 
-                            <img src="https://img.youtube.com/vi/HSzCqTtEyNE/maxresdefault.jpg" alt="Watch on YouTube"
-                                class="img-fluid">
+                <!-- Video 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+
+                        <a href="https://www.youtube.com/watch?v=HSzCqTtEyNE" target="_blank" class="position-relative">
+
+                            <img src="https://img.youtube.com/vi/HSzCqTtEyNE/maxresdefault.jpg"
+                                class="card-img-top rounded-top">
+
+                            <!-- Play Overlay -->
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div style="background:rgba(0,0,0,0.6); padding:12px 16px; border-radius:50%;">
+                                    ▶
+                                </div>
+                            </div>
+
                         </a>
+
+                        <div class="card-body">
+                            <h6 class="fw-semibold">
+                                Angular Setup (Beginner to Pro Start)
+                            </h6>
+
+                            <p class="text-muted small">
+                                Start your Angular journey with best practices from day 1
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Video 2 -->
                 <div class="col-md-4">
-                    <div class="ratio ratio-16x9 shadow-sm rounded">
-                        <a href="https://www.youtube.com/watch?v=UYlBhZFHo34" target="_blank"
-                            class="d-block shadow-sm rounded overflow-hidden">
+                    <div class="card border-0 shadow-sm h-100">
 
-                            <img src="https://img.youtube.com/vi/UYlBhZFHo34/maxresdefault.jpg" alt="Watch on YouTube"
-                                class="img-fluid">
+                        <a href="https://www.youtube.com/watch?v=UYlBhZFHo34" target="_blank" class="position-relative">
+
+                            <img src="https://img.youtube.com/vi/UYlBhZFHo34/maxresdefault.jpg"
+                                class="card-img-top rounded-top">
+
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div style="background:rgba(0,0,0,0.6); padding:12px 16px; border-radius:50%;">
+                                    ▶
+                                </div>
+                            </div>
+
                         </a>
+
+                        <div class="card-body">
+                            <h6 class="fw-semibold">
+                                Angular Standalone Components (Real Use)
+                            </h6>
+
+                            <p class="text-muted small">
+                                Learn how modern Angular apps are structured
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Video 3 -->
                 <div class="col-md-4">
-                    <div class="ratio ratio-16x9 shadow-sm rounded">
-                        <a href="https://www.youtube.com/watch?v=flqCeRnlCos" target="_blank"
-                            class="d-block shadow-sm rounded overflow-hidden">
+                    <div class="card border-0 shadow-sm h-100">
 
-                            <img src="https://img.youtube.com/vi/flqCeRnlCos/maxresdefault.jpg" alt="Watch on YouTube"
-                                class="img-fluid">
+                        <a href="https://www.youtube.com/watch?v=flqCeRnlCos" target="_blank" class="position-relative">
+
+                            <img src="https://img.youtube.com/vi/flqCeRnlCos/maxresdefault.jpg"
+                                class="card-img-top rounded-top">
+
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <div style="background:rgba(0,0,0,0.6); padding:12px 16px; border-radius:50%;">
+                                    ▶
+                                </div>
+                            </div>
+
                         </a>
+
+                        <div class="card-body">
+                            <h6 class="fw-semibold">
+                                Angular Routing Explained (Interview Focus)
+                            </h6>
+
+                            <p class="text-muted small">
+                                Master routing concepts asked in real interviews
+                            </p>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
 
-            <div class="text-center mt-4">
-                <a href="https://www.youtube.com/@sandipjaiswar3012" target="_blank" class="btn btn-dark btn-lg">
+            <!-- CTA Section -->
+            <div class="text-center mt-5">
+
+                <p class="fw-semibold">
+                    Watching videos but still not getting interview calls?
+                </p>
+
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
+                    Book 1:1 Guidance →
+                </a>
+
+                <p class="text-muted mt-2" style="font-size:14px;">
+                    Or explore more on YouTube
+                </p>
+
+                <a href="https://www.youtube.com/@sandipjaiswar3012" target="_blank" class="btn btn-outline-dark mt-2">
                     Visit YouTube Channel
                 </a>
+
             </div>
+
         </div>
     </section>
 
@@ -285,42 +452,272 @@
     <!-- LinkedIn -->
     <section id="linkedin" class="section-padding bg-light">
         <div class="container">
+
+            <!-- Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">LinkedIn</h2>
-                <p class="text-muted">Posts, videos & career insights</p>
+                <h2 class="fw-bold">Learn From Real Career Insights</h2>
+                <p class="text-muted">
+                    Actionable tips that help developers get interview calls
+                </p>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <p class="text-muted mb-4">
-                        I actively share Angular tips, career guidance, and mentoring insights on LinkedIn.
-                    </p>
-                    <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/recent-activity/all/" target="_blank"
-                        class="btn btn-outline-dark btn-lg">
-                        View LinkedIn Activity
-                    </a>
+            <!-- Content Cards -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
+                        <h6 class="fw-semibold">Resume Mistakes</h6>
+                        <p class="text-muted small">
+                            Why 90% of developers get rejected before interviews
+                        </p>
+                    </div>
                 </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
+                        <h6 class="fw-semibold">Interview Strategy</h6>
+                        <p class="text-muted small">
+                            How to explain your projects and stand out
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
+                        <h6 class="fw-semibold">Career Growth</h6>
+                        <p class="text-muted small">
+                            Move from mid-level to senior roles faster
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Social Proof -->
+            <div class="text-center mt-5">
+                <p class="fw-semibold">
+                    🚀 1000+ developers are already following for career growth
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-3">
+
+                <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/recent-activity/all/" target="_blank"
+                    class="btn btn-dark btn-lg">
+                    Follow on LinkedIn →
+                </a>
+
+                <p class="text-muted mt-2" style="font-size:14px;">
+                    Daily insights. No fluff. Real results.
+                </p>
+
+            </div>
+
+            <!-- Conversion CTA -->
+            <div class="text-center mt-5">
+
+                <p class="fw-semibold">
+                    Still not getting interview calls?
+                </p>
+
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-outline-dark btn-lg">
+                    Book 1:1 Career Guidance →
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonial section -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Trusted by Developers Like You</h2>
+                <p class="text-muted">
+                    Real results from developers who cracked interviews 🚀
+                </p>
+                <p class="fw-semibold mt-2">⭐ 4.9/5 from 100+ sessions</p>
+            </div>
+
+            <!-- Carousel -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center g-4">
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <p>
+                                        “I was applying daily but getting no calls.
+                                        After fixing my resume, I got 3 interviews in 2 weeks.”
+                                    </p>
+                                    <div class="mt-3 d-flex align-items-center">
+                                        <div class="avatar">R</div>
+                                        <div class="ms-3">
+                                            <strong>Rahul</strong><br>
+                                            <small>5 yrs • Frontend Dev</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <p>
+                                        “Mock interview changed everything.
+                                        Now I can explain my projects clearly.”
+                                    </p>
+                                    <div class="mt-3 d-flex align-items-center">
+                                        <div class="avatar">P</div>
+                                        <div class="ms-3">
+                                            <strong>Priya</strong><br>
+                                            <small>7 yrs • Angular Dev</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center g-4">
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <p>
+                                        “Got promoted after improving system design and communication.”
+                                    </p>
+                                    <div class="mt-3 d-flex align-items-center">
+                                        <div class="avatar">A</div>
+                                        <div class="ms-3">
+                                            <strong>Amit</strong><br>
+                                            <small>8 yrs • Engineer</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <p>
+                                        “Resume feedback alone was worth it. Immediate shortlist.”
+                                    </p>
+                                    <div class="mt-3 d-flex align-items-center">
+                                        <div class="avatar">S</div>
+                                        <div class="ms-3">
+                                            <strong>Sneha</strong><br>
+                                            <small>6 yrs • Frontend Dev</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-5">
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
+                    Book 1:1 Diagnosis →
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding bg-light">
         <div class="container text-center">
-            <h2 class="fw-bold mb-3">Let’s Work Together</h2>
-            <p class="text-muted mb-4">
-                Coaching, consulting, or collaboration — let’s talk.
+
+            <!-- Heading -->
+            <h2 class="fw-bold mb-3">Ready to Fix Your Interview Struggles?</h2>
+
+            <p class="text-muted mb-4" style="max-width:600px; margin:auto;">
+                If you're not getting interview calls or struggling to crack them,
+                let’s fix it together with a clear, actionable plan.
             </p>
-            <a href="mailto:contact@sandipjaiswar.com" class="btn btn-dark btn-lg px-4">
-                contact@sandipjaiswar.com
+
+            <!-- Primary CTA -->
+            <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-4 mb-3">
+                Book 1:1 Diagnosis →
             </a>
+
+            <!-- Trust -->
+            <p style="font-size:14px; color:#666;">
+                Limited slots available each week • 1:1 personalized guidance
+            </p>
+
+            <!-- Divider -->
+            <div class="my-4">
+                <span style="color:#aaa;">or</span>
+            </div>
+
+            <!-- Secondary CTA -->
+            <p class="text-muted mb-2">Prefer email?</p>
+
+            <a href="mailto:contact@sandipjaiswar.com" class="btn btn-outline-dark px-4">
+                sandipjaiswar@gmail.com
+            </a>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-0">© 2026 Sandip Jaiswar. All rights reserved.</p>
+    <footer style="background:#111; color:#fff; padding:30px 0;">
+        <div class="container text-center">
+
+            <p class="mb-2 fw-semibold">
+                Sandip Jaiswar • Frontend Career Coach
+            </p>
+
+            <p style="font-size:14px; color:#aaa;">
+                Helping developers get 3–5 interview calls & crack them 🚀
+            </p>
+
+            <!-- Social Links -->
+            <div class="mt-3">
+                <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank" class="text-white me-3">
+                    LinkedIn
+                </a>
+                <a href="https://www.youtube.com/@sandipjaiswar3012" target="_blank" class="text-white me-3">
+                    YouTube
+                </a>
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" class="text-white">
+                    Book Call
+                </a>
+            </div>
+
+            <p class="mt-3 mb-0" style="font-size:13px; color:#777;">
+                © 2026 Sandip Jaiswar. All rights reserved.
+            </p>
+
         </div>
     </footer>
 
@@ -328,41 +725,80 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.getElementById("leadForm").addEventListener("submit", function(e) {
-          e.preventDefault();
-        
-          const email = document.getElementById("email").value;
-          const experience = document.getElementById("experience").value;
-        
-          const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSd-Z5HctT4pur87anp5RBjkFFwiwLlFlC4AP97ewJItP7BsnA/formResponse";
-        
-          const emailField = "entry.1926949110";
-          const expField = "entry.2017070308";
-        
-          const formData = new URLSearchParams();
-          formData.append(emailField, email);
-          formData.append(expField, experience);
-        
-          fetch(formURL, {
-            method: "POST",
-            mode: "no-cors",
-            body: formData
-          });
-        
-          // Download PDF
-          const link = document.createElement("a");
-          link.href = "frontend_interview_checklist.pdf";
-          link.download = "frontend_interview_checklist.pdf";
-          link.click();
-        
-          // Redirect to Topmate
-          setTimeout(() => {
-            window.location.href = "https://topmate.io/sandip_jaiswar/2016575";
-          }, 1500);
-        
-          document.getElementById("leadForm").reset();
+        document.getElementById("leadForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const experience = document.getElementById("experience").value;
+
+            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSd-Z5HctT4pur87anp5RBjkFFwiwLlFlC4AP97ewJItP7BsnA/formResponse";
+
+            const emailField = "entry.1926949110";
+            const expField = "entry.2017070308";
+
+            const formData = new URLSearchParams();
+            formData.append(emailField, email);
+            formData.append(expField, experience);
+
+            fetch(formURL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            });
+
+            // Download PDF
+            const link = document.createElement("a");
+            link.href = "frontend_interview_checklist.pdf";
+            link.download = "frontend_interview_checklist.pdf";
+            link.click();
+
+            // Redirect to Topmate
+            setTimeout(() => {
+                window.location.href = "https://topmate.io/sandip_jaiswar/2016575";
+            }, 1500);
+
+            document.getElementById("leadForm").reset();
         });
-        </script>
+    </script>
+
+    <style>
+        .testimonial-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            background: #000;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        var myCarousel = document.querySelector('#testimonialCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,
+            ride: 'carousel'
+        })
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PTYPRFPN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXX');
+    </script>
 
 </body>
 
