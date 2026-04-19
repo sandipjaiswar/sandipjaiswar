@@ -16,7 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?familyInter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?familyInter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
 
     <style>
         body {
@@ -25,6 +25,17 @@
             scroll-behavior: smooth;
             padding-bottom: 80px;
             /* space for sticky button */
+        }
+
+        .hero-btn {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-btn {
+                width: auto;
+            }
         }
 
         .hero {
@@ -164,7 +175,7 @@
     </nav>
 
     <!-- Hero -->
-    <section class="hero">
+    <!-- <section class="hero">
         <div class="container text-center">
             <h1 class="fw-bold">
                 Not Getting Interview Calls Even After 5–10 Years Experience?
@@ -196,6 +207,57 @@
             <p class="mt-3 text-muted">
                 + Bonus: Learn how to get 3–5 interview calls in 30 days 🚀
             </p>
+        </div>
+    </section> -->
+    <!-- Hero -->
+    <section class="hero py-5">
+        <div class="container text-center">
+    
+            <!-- HEADLINE -->
+            <h1 class="fw-bold mb-3">
+                Not Getting Interview Calls Even After 5–10 Years Experience?
+            </h1>
+    
+            <!-- SUBHEAD -->
+            <p class="lead mb-3">
+                I’ll show you exactly what’s going wrong — and how to fix it in 15 minutes.
+            </p>
+    
+            <!-- TRUST -->
+            <p class="text-muted mb-3">
+                12+ years experience | Helped 100+ developers
+            </p>
+    
+            <!-- BENEFITS -->
+            <div class="mb-4">
+                <p class="mb-1">✔ Resume feedback</p>
+                <p class="mb-1">✔ Machine coding guidance</p>
+                <p class="mb-1">✔ Clear interview strategy</p>
+            </div>
+    
+            <!-- CTA -->
+            <div class="mb-2">
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank"
+                    class="btn btn-dark btn-lg px-5 py-3 hero-btn fw-bold">
+                    Fix My Interview Strategy (₹99)
+                </a>
+            </div>
+    
+            <!-- TRUST REDUCER -->
+            <p class="text-muted small">
+                Takes less than 15 minutes • Direct actionable feedback • No fluff
+            </p>
+    
+            <!-- URGENCY -->
+            <p class="text-danger fw-semibold mt-2">
+                ⚠️ Only 3 slots available today
+            </p>
+    
+            <!-- FILTER (VERY POWERFUL) -->
+            <p class="text-muted small mt-2">
+                This is for serious frontend developers preparing for interviews — not for casual browsing.
+            </p>
+    
         </div>
     </section>
 
@@ -874,19 +936,19 @@
 
     <div class="sticky-cta" id="stickyCta">
         <a href="https://topmate.io/sandip_jaiswar/2016575">
-          Book 1:1 Diagnosis →
+            Book 1:1 Diagnosis →
         </a>
-        <span onclick="document.getElementById('stickyCta').style.display='none'" 
-              style="position:absolute; right:10px; top:5px; cursor:pointer; color:#fff;">
-          ✕
+        <span onclick="document.getElementById('stickyCta').style.display='none'"
+            style="position:absolute; right:10px; top:5px; cursor:pointer; color:#fff;">
+            ✕
         </span>
-      </div>
+    </div>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
         document.getElementById("leadForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -921,7 +983,7 @@
 
             document.getElementById("leadForm").reset();
         });
-    </script>
+    </script> -->
 
     <style>
         .testimonial-card {
