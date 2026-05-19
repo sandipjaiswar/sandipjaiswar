@@ -64,7 +64,7 @@
             font-size: 14px;
         }
 
-        .sticky-cta {
+        /* .sticky-cta {
             position: fixed;
             bottom: 15px;
             left: 50%;
@@ -88,7 +88,7 @@
 
         .sticky-cta {
             display: none;
-        }
+        } */
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
@@ -131,6 +131,66 @@
                 padding-right: 15px;
             }
 
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PTYPRFPN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8PTYPRFPN');
+    </script>
+
+    <style>
+        .sticky-cta {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: 92%;
+            max-width: 420px;
+        }
+
+        .cta-btn {
+            display: block;
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-text {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 3px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            background: #000;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -212,52 +272,62 @@
     <!-- Hero -->
     <section class="hero py-5">
         <div class="container text-center">
-    
+
             <!-- HEADLINE -->
             <h1 class="fw-bold mb-3">
-                Not Getting Interview Calls Even After 5–10 Years Experience?
+                Fix Your Interview Rejections in 15 Minutes
             </h1>
-    
+
             <!-- SUBHEAD -->
-            <p class="lead mb-3">
-                I’ll show you exactly what’s going wrong — and how to fix it in 15 minutes.
+            <p class="lead mb-2">
+                Find out exactly why you're getting rejected — and fix it instantly.
             </p>
-    
+
+            <!-- PATTERN INTERRUPT -->
+            <p class="fw-semibold mb-3">
+                It’s NOT your skills. It’s your positioning.
+            </p>
+
             <!-- TRUST -->
             <p class="text-muted mb-3">
-                12+ years experience | Helped 100+ developers
+                12+ years experience • Helped 100+ developers
             </p>
-    
+
             <!-- BENEFITS -->
             <div class="mb-4">
-                <p class="mb-1">✔ Resume feedback</p>
-                <p class="mb-1">✔ Machine coding guidance</p>
-                <p class="mb-1">✔ Clear interview strategy</p>
+                <p class="mb-1">✔ Resume positioning fix</p>
+                <p class="mb-1">✔ Project explanation clarity</p>
+                <p class="mb-1">✔ Interview strategy breakdown</p>
             </div>
-    
+
             <!-- CTA -->
             <div class="mb-2">
                 <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank"
                     class="btn btn-dark btn-lg px-5 py-3 hero-btn fw-bold">
-                    Fix My Interview Strategy (₹99)
+                    Fix My Interview Mistakes (₹99)
                 </a>
             </div>
-    
+
             <!-- TRUST REDUCER -->
-            <p class="text-muted small">
-                Takes less than 15 minutes • Direct actionable feedback • No fluff
+            <p class="text-muted small mb-1">
+                15 min call • Instant clarity • No fluff
             </p>
-    
+
+            <!-- RISK REVERSAL -->
+            <p class="text-muted small">
+                💯 100% refund if you don’t get value
+            </p>
+
             <!-- URGENCY -->
             <p class="text-danger fw-semibold mt-2">
                 ⚠️ Only 3 slots available today
             </p>
-    
-            <!-- FILTER (VERY POWERFUL) -->
+
+            <!-- FILTER -->
             <p class="text-muted small mt-2">
-                This is for serious frontend developers preparing for interviews — not for casual browsing.
+                For serious developers who want real results — not random tips.
             </p>
-    
+
         </div>
     </section>
 
@@ -265,22 +335,24 @@
     <section id="about" class="section-padding">
         <div class="container text-center">
 
-            <h2 class="fw-bold mb-3">About Me</h2>
+            <h2 class="fw-bold mb-3">Meet Your Mentor</h2>
 
             <p class="lead">
-                I’m <strong>Sandip Jaiswar</strong> — Engineering Manager with 12+ years of experience helping frontend
-                developers crack interviews and grow into senior roles 🚀
+                I’m <strong>Sandip Jaiswar</strong> — Engineering Manager with 12+ years of experience.
+            </p>
+
+            <p class="fw-semibold">
+                I help developers who are struggling with interviews — even after 5–10 years of experience.
             </p>
 
             <p style="max-width: 700px; margin: auto; color:#555;">
-                I’ve seen developers with 5–10+ years of experience struggle to get interview calls — not because of
-                lack of skills, but because of poor positioning, weak resume storytelling, and unclear communication.
+                Most developers don’t get rejected because of lack of skills.
+                They get rejected because they don’t know how to position themselves, explain projects, and communicate
+                clearly in interviews.
             </p>
 
             <p class="mt-3" style="max-width: 700px; margin: auto; color:#555;">
-                I help fix that.
-                Through mock interviews, resume optimization, and real-world guidance — I help you get 3–5 interview
-                calls and confidently crack them.
+                I help you fix that — so you can start getting interview calls and crack them with confidence.
             </p>
 
             <div class="mt-4">
@@ -295,14 +367,14 @@
 
             <div class="mt-4">
                 <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
-                    Book 1:1 Diagnosis →
+                    Fix My Interview Mistakes (₹99)
                 </a>
             </div>
 
         </div>
     </section>
 
-    <section class="section-padding">
+    <!-- <section class="section-padding">
         <div class="container">
 
             <h2>How to Get Interview Calls as a Frontend Developer</h2>
@@ -325,107 +397,63 @@
             </ul>
 
         </div>
-    </section>
+    </section> -->
 
     <!-- Services -->
     <section id="services" class="section-padding bg-light">
-        <div class="container">
+        <div class="container text-center">
 
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">How I Can Help You</h2>
-                <p style="color:#666;">
-                    If you're struggling to get interview calls or crack interviews — this is for you
-                </p>
+            <h2 class="fw-bold mb-3">Start Here (Most Developers Do This First)</h2>
+
+            <p style="color:#666; max-width:600px; margin:auto;">
+                If you're not getting interview calls or getting rejected,
+                don’t guess — get clarity first.
+            </p>
+
+            <!-- MAIN OFFER -->
+            <div class="mt-5" style="max-width:500px; margin:auto;">
+                <div class="card border-0 shadow p-4" style="border:2px solid #000;">
+
+                    <span class="badge bg-dark mb-3">🔥 Recommended First Step</span>
+
+                    <h4 class="fw-bold">Fix My Interview Mistakes (₹99)</h4>
+
+                    <p class="text-muted mt-3">
+                        In this 15-min call, I’ll show you exactly why you're getting rejected
+                        and what to fix immediately.
+                    </p>
+
+                    <p class="fw-semibold mt-3">
+                        ✔ Identify your exact gaps <br>
+                        ✔ Fix resume positioning <br>
+                        ✔ Improve project explanation <br>
+                        ✔ Clear next-step roadmap
+                    </p>
+
+                    <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg w-100 mt-3 fw-bold">
+                        Book My ₹99 Call Now
+                    </a>
+
+                    <p class="text-success small mt-2">
+                        ✔ 100% refundable if no value
+                    </p>
+
+                    <p class="text-danger small mt-2">
+                        ⚠️ Limited slots available
+                    </p>
+
+                </div>
             </div>
 
-            <div class="row g-4">
-
-                <!-- Service 1 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold">1:1 Mock Interview & Diagnosis</h5>
-
-                            <p class="text-muted mt-3">
-                                Not getting interview calls or failing interviews?
-                                I’ll analyze your resume, projects, and communication and give you a clear action plan.
-                            </p>
-
-                            <p class="fw-semibold mt-3">
-                                ✔ Resume feedback
-                                ✔ Live mock interview
-                                ✔ Clear improvement roadmap
-                            </p>
-
-                            <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark w-100 mt-3">
-                                Book Session →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold">Interview Preparation Program</h5>
-
-                            <p class="text-muted mt-3">
-                                Structured guidance to help you confidently crack frontend interviews and move to senior
-                                roles.
-                            </p>
-
-                            <p class="fw-semibold mt-3">
-                                ✔ Angular + JS fundamentals
-                                ✔ Real interview questions
-                                ✔ Communication & storytelling
-                            </p>
-
-                            <a href="https://topmate.io/sandip_jaiswar/2020195" class="btn btn-outline-dark w-100 mt-3">
-                                Learn More →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold">Resume & Profile Optimization</h5>
-
-                            <p class="text-muted mt-3">
-                                Your resume is the first filter.
-                                I help you position your experience so recruiters actually shortlist you.
-                            </p>
-
-                            <p class="fw-semibold mt-3">
-                                ✔ ATS-friendly resume
-                                ✔ Strong project storytelling
-                                ✔ LinkedIn optimization
-                            </p>
-
-                            <a href="https://topmate.io/sandip_jaiswar/2037517" class="btn btn-outline-dark w-100 mt-3">
-                                Fix My Resume →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Bottom CTA -->
-            <div class="text-center mt-5">
-                <p class="fw-semibold">
-                    Not sure where you're stuck?
+            <!-- SECONDARY (LOW EMPHASIS) -->
+            <div class="mt-5">
+                <p class="text-muted">
+                    Need deeper help after this?
                 </p>
 
-                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
-                    Book 1:1 Diagnosis →
-                </a>
-
-                <p style="font-size:14px; color:#666; margin-top:10px;">
-                    Limited slots available each week
+                <p class="small text-muted">
+                    After the call, I’ll guide you to the right next step
+                    (Interview prep program / Resume fix)
                 </p>
             </div>
 
@@ -438,9 +466,9 @@
 
             <!-- Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Learn → Apply → Get Interview Calls</h2>
+                <h2 class="fw-bold">Still Not Getting Interview Calls?</h2>
                 <p class="text-muted">
-                    Watch real interview-focused Angular & Frontend videos
+                    Watching videos alone won’t fix your interview mistakes
                 </p>
             </div>
 
@@ -456,7 +484,6 @@
                             <img src="https://img.youtube.com/vi/HSzCqTtEyNE/maxresdefault.jpg"
                                 class="card-img-top rounded-top" loading="lazy">
 
-                            <!-- Play Overlay -->
                             <div class="position-absolute top-50 start-50 translate-middle">
                                 <div style="background:rgba(0,0,0,0.6); padding:12px 16px; border-radius:50%;">
                                     ▶
@@ -467,11 +494,11 @@
 
                         <div class="card-body">
                             <h6 class="fw-semibold">
-                                Angular Setup (Beginner to Pro Start)
+                                Angular Setup (Avoid Beginner Mistakes)
                             </h6>
 
                             <p class="text-muted small">
-                                Start your Angular journey with best practices from day 1
+                                Most developers start wrong — and struggle later
                             </p>
                         </div>
 
@@ -497,11 +524,11 @@
 
                         <div class="card-body">
                             <h6 class="fw-semibold">
-                                Angular Standalone Components (Real Use)
+                                Standalone Components (What Interviewers Expect)
                             </h6>
 
                             <p class="text-muted small">
-                                Learn how modern Angular apps are structured
+                                Learn what actually gets you selected
                             </p>
                         </div>
 
@@ -527,11 +554,11 @@
 
                         <div class="card-body">
                             <h6 class="fw-semibold">
-                                Angular Routing Explained (Interview Focus)
+                                Angular Routing (Interview Questions Explained)
                             </h6>
 
                             <p class="text-muted small">
-                                Master routing concepts asked in real interviews
+                                Topics that decide your selection
                             </p>
                         </div>
 
@@ -540,108 +567,101 @@
 
             </div>
 
-            <!-- CTA Section -->
+            <!-- Conversion Push -->
             <div class="text-center mt-5">
 
                 <p class="fw-semibold">
-                    Watching videos but still not getting interview calls?
+                    Videos give knowledge… but not results
                 </p>
 
-                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
-                    Book 1:1 Guidance →
-                </a>
-
-                <p class="text-muted mt-2" style="font-size:14px;">
-                    Or explore more on YouTube
+                <p class="text-muted">
+                    If you're still not getting calls, you need personalized feedback
                 </p>
 
-                <a href="https://www.youtube.com/@sandipjaiswar3012" target="_blank" class="btn btn-outline-dark mt-2">
-                    Visit YouTube Channel
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg mt-3">
+                    Fix My Interview Mistakes (₹99)
                 </a>
+
+                <p class="text-danger mt-3 fw-semibold">
+                    ⚠️ Limited slots available today
+                </p>
 
             </div>
 
         </div>
     </section>
 
-
     <!-- LinkedIn -->
     <section id="linkedin" class="section-padding bg-light">
-        <div class="container">
+        <div class="container text-center">
 
             <!-- Heading -->
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Learn From Real Career Insights</h2>
-                <p class="text-muted">
-                    Actionable tips that help developers get interview calls
-                </p>
-            </div>
+            <h2 class="fw-bold mb-3">
+                Why Most Developers Don’t Get Interview Calls
+            </h2>
 
-            <!-- Content Cards -->
+            <p class="text-muted mb-4">
+                These are the exact mistakes I see every day
+            </p>
+
+            <!-- Problem Cards -->
             <div class="row g-4 justify-content-center">
 
-                <!-- Card 1 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
+                    <div class="card border-0 shadow-sm h-100 p-3">
                         <h6 class="fw-semibold">Resume Mistakes</h6>
                         <p class="text-muted small">
-                            Why 90% of developers get rejected before interviews
+                            Your resume doesn’t show impact — so recruiters ignore it
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
-                        <h6 class="fw-semibold">Interview Strategy</h6>
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <h6 class="fw-semibold">Weak Communication</h6>
                         <p class="text-muted small">
-                            How to explain your projects and stand out
+                            You know the answer… but can’t explain it clearly in interviews
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-3 text-center">
-                        <h6 class="fw-semibold">Career Growth</h6>
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <h6 class="fw-semibold">Poor Positioning</h6>
                         <p class="text-muted small">
-                            Move from mid-level to senior roles faster
+                            You apply randomly instead of standing out as a strong candidate
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Social Proof -->
-            <div class="text-center mt-5">
+            <!-- Authority -->
+            <div class="mt-5">
                 <p class="fw-semibold">
-                    🚀 1000+ developers are already following for career growth
+                    🚀 100+ developers already improved their interview results
                 </p>
             </div>
 
-            <!-- CTA -->
-            <div class="text-center mt-3">
+            <!-- Primary CTA (IMPORTANT) -->
+            <div class="mt-4">
 
-                <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/recent-activity/all/" target="_blank"
-                    class="btn btn-dark btn-lg">
-                    Follow on LinkedIn →
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-5">
+                    Fix My Interview Mistakes (₹99)
                 </a>
 
                 <p class="text-muted mt-2" style="font-size:14px;">
-                    Daily insights. No fluff. Real results.
+                    15 min call • Instant clarity • No fluff
                 </p>
 
             </div>
 
-            <!-- Conversion CTA -->
-            <div class="text-center mt-5">
+            <!-- Secondary (Optional, Low Priority) -->
+            <div class="mt-3">
 
-                <p class="fw-semibold">
-                    Still not getting interview calls?
-                </p>
-
-                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-outline-dark btn-lg">
-                    Book 1:1 Career Guidance →
+                <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/recent-activity/all/" target="_blank"
+                    class="btn btn-outline-dark">
+                    View Free Tips on LinkedIn
                 </a>
 
             </div>
@@ -655,114 +675,100 @@
 
             <!-- Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Trusted by Developers Like You</h2>
+                <h2 class="fw-bold">Developers Are Fixing Their Interview Results 🚀</h2>
+
                 <p class="text-muted">
-                    Real results from developers who cracked interviews 🚀
+                    Not theory. Real outcomes after fixing positioning & communication
                 </p>
-                <p class="fw-semibold mt-2">⭐ 4.9/5 from 100+ sessions</p>
+
+                <p class="fw-semibold mt-2">
+                    ⭐ 4.9/5 from 100+ sessions
+                </p>
             </div>
 
-            <!-- Carousel -->
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Testimonials Grid (Better than carousel for conversion) -->
+            <div class="row g-4 justify-content-center">
 
-                <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <p class="fw-semibold">
+                            “Went from zero calls → 3 interviews in 2 weeks”
+                        </p>
 
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center g-4">
+                        <p class="text-muted small">
+                            Fixed resume positioning + project explanation
+                        </p>
 
-                            <div class="col-md-4">
-                                <div class="testimonial-card">
-                                    <p>
-                                        “I was applying daily but getting no calls.
-                                        After fixing my resume, I got 3 interviews in 2 weeks.”
-                                    </p>
-                                    <div class="mt-3 d-flex align-items-center">
-                                        <div class="avatar">R</div>
-                                        <div class="ms-3">
-                                            <strong>Rahul</strong><br>
-                                            <small>5 yrs • Frontend Dev</small>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="mt-3 d-flex align-items-center">
+                            <div class="avatar">R</div>
+                            <div class="ms-3">
+                                <strong>Rahul</strong><br>
+                                <small>5 yrs • Frontend Dev</small>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="testimonial-card">
-                                    <p>
-                                        “Mock interview changed everything.
-                                        Now I can explain my projects clearly.”
-                                    </p>
-                                    <div class="mt-3 d-flex align-items-center">
-                                        <div class="avatar">P</div>
-                                        <div class="ms-3">
-                                            <strong>Priya</strong><br>
-                                            <small>7 yrs • Angular Dev</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="row justify-content-center g-4">
-
-                            <div class="col-md-4">
-                                <div class="testimonial-card">
-                                    <p>
-                                        “Got promoted after improving system design and communication.”
-                                    </p>
-                                    <div class="mt-3 d-flex align-items-center">
-                                        <div class="avatar">A</div>
-                                        <div class="ms-3">
-                                            <strong>Amit</strong><br>
-                                            <small>8 yrs • Engineer</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="testimonial-card">
-                                    <p>
-                                        “Resume feedback alone was worth it. Immediate shortlist.”
-                                    </p>
-                                    <div class="mt-3 d-flex align-items-center">
-                                        <div class="avatar">S</div>
-                                        <div class="ms-3">
-                                            <strong>Sneha</strong><br>
-                                            <small>6 yrs • Frontend Dev</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
+                <!-- Testimonial 2 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <p class="fw-semibold">
+                            “Finally able to explain projects clearly in interviews”
+                        </p>
 
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                        <p class="text-muted small">
+                            Mock interview completely changed confidence
+                        </p>
+
+                        <div class="mt-3 d-flex align-items-center">
+                            <div class="avatar">P</div>
+                            <div class="ms-3">
+                                <strong>Priya</strong><br>
+                                <small>7 yrs • Angular Dev</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100">
+                        <p class="fw-semibold">
+                            “Got shortlisted immediately after resume fix”
+                        </p>
+
+                        <p class="text-muted small">
+                            Small changes → big difference in response rate
+                        </p>
+
+                        <div class="mt-3 d-flex align-items-center">
+                            <div class="avatar">S</div>
+                            <div class="ms-3">
+                                <strong>Sneha</strong><br>
+                                <small>6 yrs • Frontend Dev</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <!-- CTA -->
             <div class="text-center mt-5">
-                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg">
-                    Book 1:1 Diagnosis →
+
+                <p class="fw-semibold mb-2">
+                    You might be just one fix away from getting calls
+                </p>
+
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-4">
+                    Fix My Interview Mistakes (₹99)
                 </a>
+
+                <p class="text-muted mt-2" style="font-size:14px;">
+                    Takes 15 minutes • 100% risk-free
+                </p>
+
             </div>
 
         </div>
@@ -774,9 +780,9 @@
 
             <!-- Heading -->
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Frequently Asked Questions</h2>
+                <h2 class="fw-bold">Still Unsure? Read This</h2>
                 <p class="text-muted">
-                    Everything you need to know before getting started
+                    Most developers have these same doubts before booking
                 </p>
             </div>
 
@@ -793,8 +799,10 @@
                     </h2>
                     <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                         <div class="accordion-body text-muted">
-                            Most developers don’t lack skills — they lack positioning.
-                            Your resume and project explanations are not aligned with what recruiters expect.
+                            It’s rarely a skill issue.
+                            Most developers fail due to poor resume positioning, weak project explanation,
+                            and unclear communication.
+                            This call helps you identify your exact gap in minutes.
                         </div>
                     </div>
                 </div>
@@ -804,13 +812,13 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#faq2">
-                            How can I improve my frontend interview skills?
+                            Is ₹99 really enough for this call?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body text-muted">
-                            Focus on communication, structured answers, and real-world examples.
-                            Mock interviews + feedback accelerate improvement significantly.
+                            Yes. This is a low-ticket entry call to give you clarity.
+                            The goal is to show you exactly what’s wrong — so you stop wasting time.
                         </div>
                     </div>
                 </div>
@@ -820,13 +828,16 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#faq3">
-                            Is this for experienced developers?
+                            What exactly happens in this 15-min call?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body text-muted">
-                            Yes. Most of my clients have 5–10+ years of experience but struggle due to poor positioning
-                            and communication — not lack of skills.
+                            ✔ Quick understanding of your current situation
+                            ✔ Identify your biggest mistake
+                            ✔ Resume/project feedback
+                            ✔ Clear next-step roadmap
+                            You leave with clarity, not confusion
                         </div>
                     </div>
                 </div>
@@ -836,13 +847,30 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#faq4">
-                            What happens in the 1:1 diagnosis session?
+                            What if I don’t get value?
                         </button>
                     </h2>
                     <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body text-muted">
-                            I review your resume, understand your experience, conduct a mock interview,
-                            and give you a clear action plan to improve your interview success rate.
+                            You get a 100% refund. No questions asked.
+                            There’s zero risk for you.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5">
+                            Who is this call for?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-muted">
+                            ✔ Developers not getting interview calls
+                            ✔ Developers getting rejected repeatedly
+                            ✔ Anyone confused about what to fix
                         </div>
                     </div>
                 </div>
@@ -851,40 +879,47 @@
 
             <!-- CTA -->
             <div class="text-center mt-5">
-                <p class="fw-semibold">Still have questions?</p>
+
+                <p class="fw-semibold">
+                    Still thinking? That’s exactly why you’re stuck.
+                </p>
 
                 <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-4">
-                    Book 1:1 Diagnosis →
+                    Fix My Interview Mistakes (₹99)
                 </a>
 
-                <p class="text-muted mt-2" style="font-size:14px;">
-                    Limited slots available each week
+                <p class="text-danger mt-2" style="font-size:14px;">
+                    ⚠️ Only limited slots available today
                 </p>
+
             </div>
 
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container text-center">
 
             <!-- Heading -->
-            <h2 class="fw-bold mb-3">Ready to Fix Your Interview Struggles?</h2>
+            <h2 class="fw-bold mb-3">
+                Still Getting Rejected? Let’s Fix It Today.
+            </h2>
 
+            <!-- Subtext -->
             <p class="text-muted mb-4" style="max-width:600px; margin:auto;">
-                If you're not getting interview calls or struggling to crack them,
-                let’s fix it together with a clear, actionable plan.
+                In just 15 minutes, you’ll discover exactly what’s going wrong —
+                and how to fix it so you start getting interview calls.
             </p>
 
-            <!-- Primary CTA -->
-            <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-4 mb-3">
-                Book 1:1 Diagnosis →
+            <!-- CTA -->
+            <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-dark btn-lg px-4 mb-3 fw-bold">
+                Fix My Interview Mistakes (₹99)
             </a>
 
-            <!-- Trust -->
+            <!-- Trust + urgency -->
             <p style="font-size:14px; color:#666;">
-                Limited slots available each week • 1:1 personalized guidance
+                ⚠️ Only limited slots available today • 100% refundable if no value
             </p>
 
             <!-- Divider -->
@@ -893,29 +928,44 @@
             </div>
 
             <!-- Secondary CTA -->
-            <p class="text-muted mb-2">Prefer email?</p>
+            <p class="text-muted mb-2">Have a question before booking?</p>
 
-            <a href="mailto:contact@sandipjaiswar.com" class="btn btn-outline-dark px-4">
-                sandipjaiswar@gmail.com
+            <a href="mailto:sandipjaiswar@gmail.com" class="btn btn-outline-dark px-4">
+                Email Me
             </a>
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="background:#111; color:#fff; padding:30px 0;">
+    <footer style="background:#111; color:#fff; padding:40px 0;">
         <div class="container text-center">
 
+            <!-- BRAND -->
             <p class="mb-2 fw-semibold">
-                Sandip Jaiswar • Frontend Career Coach
+                Sandip Jaiswar • Frontend Interview Coach
             </p>
 
-            <p style="font-size:14px; color:#aaa;">
-                Helping developers get 3–5 interview calls & crack them 🚀
+            <!-- POSITIONING -->
+            <p style="font-size:14px; color:#aaa; max-width:500px; margin:auto;">
+                Helping developers fix interview mistakes, get interview calls, and confidently crack them.
             </p>
 
-            <!-- Social Links -->
-            <div class="mt-3">
+            <!-- CTA (NEW - HIGH IMPACT) -->
+            <div class="mt-4">
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank"
+                    style="background:#fff; color:#000; padding:12px 20px; border-radius:8px; font-weight:600; text-decoration:none;">
+                    Fix My Interview Mistakes (₹99)
+                </a>
+            </div>
+
+            <!-- TRUST LINE -->
+            <p class="mt-3" style="font-size:13px; color:#bbb;">
+                15 min call • Instant clarity • 100% risk-free
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="mt-4">
                 <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank" class="text-white me-3">
                     LinkedIn
                 </a>
@@ -927,7 +977,8 @@
                 </a>
             </div>
 
-            <p class="mt-3 mb-0" style="font-size:13px; color:#777;">
+            <!-- LEGAL -->
+            <p class="mt-4 mb-0" style="font-size:12px; color:#777;">
                 © 2026 Sandip Jaiswar. All rights reserved.
             </p>
 
@@ -935,13 +986,16 @@
     </footer>
 
     <div class="sticky-cta" id="stickyCta">
-        <a href="https://topmate.io/sandip_jaiswar/2016575">
-            Book 1:1 Diagnosis →
+
+        <a href="https://topmate.io/sandip_jaiswar/2016575" class="cta-btn">
+            Fix My Interview Mistakes (₹99)
+            <span class="sub-text">15 min • Instant clarity</span>
         </a>
-        <span onclick="document.getElementById('stickyCta').style.display='none'"
-            style="position:absolute; right:10px; top:5px; cursor:pointer; color:#fff;">
+
+        <span class="close-btn" onclick="document.getElementById('stickyCta').style.display='none'">
             ✕
         </span>
+
     </div>
     </div>
 
@@ -1014,15 +1068,6 @@
         })
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PTYPRFPN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-T8PTYPRFPN');
-    </script>
 
     <script type="application/ld+json">
     {
