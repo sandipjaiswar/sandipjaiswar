@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontend Interview Coach | Get 3–5 Interview Calls in 30 Days | Sandip Jaiswar</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Struggling to get interview calls after 5–10 years experience? Learn how to fix your resume, positioning, and crack frontend interviews with 1:1 coaching.">
+    <meta name="keywords"
+        content="Angular interview preparation, frontend interview coach, resume optimization, Angular coaching, frontend developer career growth">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css2?familyInter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2c2c2c;
+            scroll-behavior: smooth;
+            /* padding-bottom: 80px; */
+            /* space for sticky button */
+        }
+
+        .hero-btn {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        @media (min-width: 768px) {
+            .hero-btn {
+                width: auto;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f7f7f7, #e9ecef);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .badge-skill {
+            background-color: #f1f3f5;
+            color: #333;
+            margin: 5px;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* .sticky-cta {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .sticky-cta a {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .sticky-cta {
+            display: none;
+        } */
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 60px 20px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            #leadForm {
+                width: 100% !important;
+            }
+
+            #leadForm input,
+            #leadForm select {
+                width: 100%;
+                padding: 14px;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+
+            #leadForm button {
+                width: 100%;
+                padding: 16px;
+                font-size: 18px;
+                border-radius: 12px;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PTYPRFPN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8PTYPRFPN');
+    </script>
+
+    <style>
+        .sticky-cta {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: 92%;
+            max-width: 420px;
+        }
+
+        .cta-btn {
+            display: block;
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .sub-text {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 3px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            background: #000;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container text-center">
+
+            <p class="lead mx-auto mb-4" style="max-width:850px;">
+
+                You're experienced.
+
+                You're capable.
+
+                You're doing what everyone tells you to do.
+
+                Yet interview calls remain inconsistent and opportunities aren't converting.
+
+                This free training will help you understand what has changed in today's hiring market—and why many good
+                developers are still being overlooked.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VIDEO -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    Not Getting Interview Calls Despite Years Of Experience?
+                </h2>
+
+                <p class="text-muted">
+
+                    If you're applying, learning new technologies, and updating your resume—but still not getting
+                    interviews—watch this before doing anything else.
+
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="ratio ratio-16x9 shadow-lg rounded">
+
+                        <iframe src="https://www.youtube.com/embed/_ux-Iyj5z3U" allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- REALIZATION -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 text-center">
+
+                    <span class="badge bg-dark mb-3">
+                        Common Realizations
+                    </span>
+
+                    <h2 class="display-5 fw-bold mb-4">
+                        If This Training Resonated With You...
+                    </h2>
+
+                    <p class="lead">
+                        You may have recognized one or more of these patterns in your own career.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-6">
+
+                    <div class="card border-0 shadow-sm p-4 h-100">
+
+                        <h5 class="fw-bold mb-3">
+                            01. More Learning Isn't Fixing The Problem
+                        </h5>
+
+                        <p class="mb-0">
+                            You've completed courses, learned new technologies,
+                            and improved your skills—but interview opportunities
+                            haven't increased proportionally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card border-0 shadow-sm p-4 h-100">
+
+                        <h5 class="fw-bold mb-3">
+                            02. Experience Alone Isn't Creating Opportunities
+                        </h5>
+
+                        <p class="mb-0">
+                            You have years of experience, yet recruiters often
+                            overlook your profile while less experienced candidates
+                            seem to get more attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card border-0 shadow-sm p-4 h-100">
+
+                        <h5 class="fw-bold mb-3">
+                            03. Something Feels Off—But You Can't Identify It
+                        </h5>
+
+                        <p class="mb-0">
+                            You've updated your resume, improved LinkedIn,
+                            and applied consistently, but you're still unsure
+                            what's actually preventing progress.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card border-0 shadow-sm p-4 h-100">
+
+                        <h5 class="fw-bold mb-3">
+                            04. You Might Be Solving The Wrong Problem
+                        </h5>
+
+                        <p class="mb-0">
+                            The challenge may not be your technical skills at all.
+                            It may be how your experience is positioned,
+                            communicated, and evaluated in today's market.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center mt-5">
+
+                <div class="col-lg-8 text-center">
+
+                    <h4 class="fw-bold">
+                        The Video Explains The Pattern.
+                    </h4>
+
+                    <h4 class="fw-bold mb-4">
+                        The Next Step Is Understanding How It Applies To You.
+                    </h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- MISSING PIECE -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 text-center">
+
+                    <span class="badge bg-dark mb-3">
+                        The Missing Piece
+                    </span>
+
+                    <h2 class="display-5 fw-bold mb-4">
+
+                        The Training Explains The Pattern.
+
+                        It Doesn't Explain Your Situation.
+
+                    </h2>
+
+                    <p class="lead mb-4">
+
+                        By now, you've probably recognized some of the problems discussed in the training.
+
+                        But one important question still remains.
+
+                    </p>
+
+                    <h3 class="fw-bold mb-4">
+
+                        What Exactly Is Holding <u>You</u> Back?
+
+                    </h3>
+
+                    <p class="lead">
+
+                        Two developers can have similar experience.
+
+                        Similar skills.
+
+                        Similar resumes.
+
+                    </p>
+
+                    <p class="lead">
+
+                        Yet one consistently gets interview calls while the other struggles to get noticed.
+
+                    </p>
+
+                    <p class="lead">
+
+                        The difference is often hidden in small things:
+
+                        how experience is positioned,
+                        how impact is communicated,
+                        what opportunities are targeted,
+                        and what hiring managers actually see.
+
+                    </p>
+
+                    <div class="card border-0 bg-light p-4 mt-5">
+
+                        <h5 class="fw-bold mb-3">
+
+                            That's The Limitation Of Free Content
+
+                        </h5>
+
+                        <p class="mb-0">
+
+                            A video can explain the market.
+
+                            It can't evaluate your resume.
+
+                            It can't review your positioning.
+
+                            It can't identify your blind spots.
+
+                            And it certainly can't tell you what to do next.
+
+                        </p>
+
+                    </div>
+
+                    <div class="mt-5">
+
+                        <h4 class="fw-bold">
+
+                            That's Where The Career Diagnostic Session Comes In.
+
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- OFFER -->
+
+    <section class="py-5 bg-dark text-white">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 text-center">
+
+                    <span class="badge bg-light text-dark mb-3">
+                        ₹199 Career Diagnostic Session
+                    </span>
+
+                    <h2 class="display-5 fw-bold mb-4">
+                        Let's Find Out What's Actually Holding You Back
+                    </h2>
+
+                    <p class="lead mb-5">
+
+                        The training explains the market.
+
+                        This session focuses on your situation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded p-4 h-100">
+
+                                <h5 class="fw-bold mb-3">
+                                    Why You're Being Overlooked
+                                </h5>
+
+                                <p class="mb-0">
+
+                                    Understand why recruiters may be skipping your profile despite your experience.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded p-4 h-100">
+
+                                <h5 class="fw-bold mb-3">
+                                    What's Actually Missing
+                                </h5>
+
+                                <p class="mb-0">
+
+                                    Identify the biggest gap in your positioning, communication, or job search approach.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="border rounded p-4 h-100">
+
+                                <h5 class="fw-bold mb-3">
+                                    What To Do Next
+                                </h5>
+
+                                <p class="mb-0">
+
+                                    Leave with a clear action plan instead of more guesswork.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center mt-5">
+
+                <div class="col-lg-8">
+
+                    <div class="bg-white text-dark rounded p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            In 20 Minutes, You'll Have Clarity On:
+                        </h5>
+
+                        <ul class="mb-0">
+
+                            <li>Why interview calls aren't coming consistently</li>
+
+                            <li>Whether your resume is helping or hurting you</li>
+
+                            <li>What hiring managers may be seeing differently</li>
+
+                            <li>The highest-impact change to make next</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5">
+
+                <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+
+                    Book My ₹199 Career Diagnostic Session
+
+                </a>
+
+                <p class="text-light mt-3 mb-0">
+
+                    One conversation could save months of solving the wrong problem.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WHY 199 -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-lg p-5">
+
+                        <div class="text-center mb-4">
+
+                            <span class="badge bg-dark">
+                                Common Question
+                            </span>
+
+                        </div>
+
+                        <h2 class="fw-bold text-center mb-4">
+
+                            Why Is The Career Diagnostic Session Only ₹199?
+
+                        </h2>
+
+                        <p class="lead text-center mb-5">
+
+                            Because this isn't a coaching program.
+
+                            It's a diagnostic conversation.
+
+                        </p>
+
+                        <p>
+
+                            Most developers don't need another course, another certification,
+                            or another YouTube playlist.
+
+                        </p>
+
+                        <p>
+
+                            They need clarity.
+
+                        </p>
+
+                        <p>
+
+                            They need to understand why opportunities aren't converting,
+                            what's actually holding them back,
+                            and where they should focus next.
+
+                        </p>
+
+                        <div class="card bg-light border-0 p-4 my-4">
+
+                            <h5 class="fw-bold mb-3">
+                                By The End Of The Session You'll Know:
+                            </h5>
+
+                            <p class="mb-2">
+                                ✓ What's likely limiting your interview opportunities
+                            </p>
+
+                            <p class="mb-2">
+                                ✓ What to stop wasting time on
+                            </p>
+
+                            <p class="mb-2">
+                                ✓ What deserves your attention next
+                            </p>
+
+                            <p class="mb-0">
+                                ✓ Whether you're closer than you think
+                            </p>
+
+                        </div>
+
+                        <p class="mb-0">
+
+                            One useful insight can save months of frustration.
+
+                            That's why many developers start here before deciding on any larger investment in their
+                            career.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- TESTIMONIALS -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="badge bg-dark mb-3">
+                    Verified Reviews
+                </span>
+
+                <h2 class="display-5 fw-bold mb-4">
+                    What Developers Say After The Session
+                </h2>
+
+                <p class="lead">
+                    Rated 4.9/5 based on verified feedback from developers.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card border-0 shadow-sm h-100 p-4">
+
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+
+                        <p>
+                            "Sandip helped me identify the gaps that were limiting my progress.
+                            The discussion was practical, honest, and immediately actionable."
+                        </p>
+
+                        <hr>
+
+                        <strong>Frontend Developer</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card border-0 shadow-sm h-100 p-4">
+
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+
+                        <p>
+                            "The session gave me clarity on my resume, LinkedIn profile,
+                            and how I was approaching interviews. Extremely valuable."
+                        </p>
+
+                        <hr>
+
+                        <strong>Senior Angular Developer</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card border-0 shadow-sm h-100 p-4">
+
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+
+                        <p>
+                            "I finally understood what was actually holding me back.
+                            It saved me from wasting more time focusing on the wrong things."
+                        </p>
+
+                        <hr>
+
+                        <strong>Software Engineer</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        ```
+
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Who This Session Is Designed For
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow-sm p-5 h-100">
+
+                        <h4 class="fw-bold mb-4">
+                            A Strong Fit If...
+                        </h4>
+
+                        <p>✓ You have 5+ years of experience</p>
+
+                        <p>✓ Interview calls have become inconsistent</p>
+
+                        <p>✓ You're facing repeated rejections</p>
+
+                        <p>✓ You're unsure what to improve next</p>
+
+                        <p class="mb-0">✓ You want honest and practical feedback</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card border-0 shadow-sm p-5 h-100 bg-light">
+
+                        <h4 class="fw-bold mb-4">
+                            Probably Not The Right Fit If...
+                        </h4>
+
+                        <p>✗ You're looking for guaranteed job placement</p>
+
+                        <p>✗ You're only looking for referrals</p>
+
+                        <p>✗ You want shortcuts instead of clarity</p>
+
+                        <p class="mb-0">✗ You're looking for beginner-level technical training</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        ```
+
+    </section>
+
+    <!-- FINAL DECISION -->
+
+    <section class="py-5 bg-dark text-white">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8 text-center">
+
+                    <span class="badge bg-light text-dark mb-3">
+                        Final Thought
+                    </span>
+
+                    <h2 class="display-4 fw-bold mb-4">
+
+                        You Don't Need More Information.
+
+                    </h2>
+
+                    <h2 class="display-5 mb-4">
+
+                        You Need Clarity.
+
+                    </h2>
+
+                    <p class="lead mb-5">
+
+                        Most developers spend months learning new technologies,
+                        updating resumes, and applying to more jobs.
+
+                        Sometimes the real problem is much simpler.
+
+                        They're solving the wrong problem.
+
+                    </p>
+
+                    <a href="https://topmate.io/sandip_jaiswar/2016575" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+
+                        Book ₹199 Career Diagnostic Session
+
+                    </a>
+
+                    <p class="mt-4 text-light opacity-75">
+
+                        One conversation could save months of guesswork.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- Left -->
+
+                <!-- <div class="col-lg-6 mb-4 mb-lg-0">
+
+                    <h4 class="fw-bold mb-3">
+                        Sandip Jaiswar
+                    </h4>
+
+                    <p class="text-light opacity-75 mb-3">
+
+                        Engineering Leader • Career Strategist • Frontend Specialist
+
+                    </p>
+
+                    <p class="text-light opacity-50 mb-0" style="max-width:500px;">
+
+                        Helping experienced developers navigate today's hiring market,
+                        improve career positioning, and create better opportunities.
+
+                    </p>
+
+                </div> -->
+
+                <!-- Right -->
+
+                <!-- <div class="col-lg-6 text-lg-end">
+        
+                    <a href="https://topmate.io/sandip_jaiswar/2016575"
+                       target="_blank"
+                       class="btn btn-light px-4 py-2 fw-semibold">
+        
+                        Book Career Strategy Session
+        
+                    </a>
+        
+                </div> -->
+
+            </div>
+
+            <hr class="my-5 border-secondary">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start">
+
+                    <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank"
+                        class="text-decoration-none text-light opacity-75 me-4">
+
+                        LinkedIn
+
+                    </a>
+
+                    <a href="https://www.youtube.com/@sandipjaiswar3012" target="_blank"
+                        class="text-decoration-none text-light opacity-75 me-4">
+
+                        YouTube
+
+                    </a>
+
+                    <a href="mailto:sandipjaiswar@gmail.com" class="text-decoration-none text-light opacity-75">
+
+                        Contact
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+                    <small class="text-light opacity-50">
+                        © 2026 Sandip Jaiswar. All rights reserved.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        .testimonial-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .avatar {
+            width: 45px;
+            height: 45px;
+            background: #000;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        var myCarousel = document.querySelector('#testimonialCarousel')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,
+            ride: 'carousel'
+        })
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sandip Jaiswar",
+      "jobTitle": "Frontend Interview Coach",
+      "url": "https://sandipjaiswar.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/sandip-jaiswar-95995891/",
+        "https://www.youtube.com/@sandipjaiswar3012"
+      ]
+    }
+    </script>
+
+
+</body>
+
+</html>
