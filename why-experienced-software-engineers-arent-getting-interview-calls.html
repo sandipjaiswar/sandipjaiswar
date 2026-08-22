@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why Experienced Software Engineers Aren't Getting Interview Calls (And How to Fix It)</title>
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description"
+        content="A practical breakdown of why software engineers with 5–15+ years of experience are struggling to get interview calls today, and the exact steps to fix your profile." />
+    <meta name="keywords"
+        content="Software Engineering Careers, Senior Developer Hiring, Interview Calls, Resume Fix, Tech Hiring Trends, System Design Preparation" />
+    <meta name="author" content="Sandip Jaiswar" />
+    <link rel="canonical" href="https://sandipjaiswar.com/why-experienced-engineers-not-getting-interview-calls.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Why Experienced Software Engineers Aren't Getting Interview Calls" />
+    <meta property="og:description"
+        content="Why 5–15 year developers are facing high rejection rates in today's tech market—and the step-by-step framework to fix your job search." />
+    <meta property="og:url"
+        content="https://sandipjaiswar.com/why-experienced-engineers-not-getting-interview-calls.html" />
+    <meta property="og:site_name" content="Sandip Jaiswar" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Why Experienced Software Engineers Aren't Getting Interview Calls" />
+    <meta name="twitter:description"
+        content="Why 5–15 year developers are facing high rejection rates in today's tech market—and the step-by-step framework to fix your job search." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PTYPRFPN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T8PTYPRFPN');
+    </script>
+
+    <style>
+        :root {
+            --bg-main: #08090a;
+            --bg-surface: #0f1013;
+            --bg-card: #14161b;
+            --bg-card-hover: #1b1e25;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.18);
+            --text-main: #f7f8f8;
+            --text-muted: #8a8f98;
+            --accent-white: #ffffff;
+            --accent-green: #10b981;
+            --font-serif: 'Newsreader', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.015em;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Reading Progress Bar */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 1050;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--accent-white);
+            transition: width 0.1s linear;
+        }
+
+        /* Editorial Typography */
+        .editorial-body {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #d1d5db;
+        }
+
+        .editorial-body p {
+            margin-bottom: 1.75rem;
+        }
+
+        .editorial-lead {
+            font-family: var(--font-serif);
+            font-size: 1.45rem;
+            line-height: 1.6;
+            color: #f3f4f6;
+            font-style: italic;
+        }
+
+        /* Navigation */
+        .navbar-saas {
+            background: rgba(8, 9, 10, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .font-mono {
+            font-family: var(--font-mono);
+        }
+
+        .text-muted-custom {
+            color: var(--text-muted);
+        }
+
+        /* SaaS Buttons */
+        .btn-saas-primary {
+            background-color: var(--accent-white);
+            color: #000000;
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-white);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-saas-primary:hover {
+            background-color: #e2e8f0;
+            border-color: #e2e8f0;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        .btn-saas-secondary {
+            background-color: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.875rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-saas-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--border-strong);
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
+
+        /* Cards & Containers */
+        .saas-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .saas-card:hover {
+            border-color: var(--border-strong);
+            background: var(--bg-card-hover);
+        }
+
+        .icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--accent-white);
+            margin-bottom: 1.25rem;
+        }
+
+        /* Callouts & Pull Quotes */
+        .callout-box {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--accent-white);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0;
+        }
+
+        .pull-quote {
+            font-family: var(--font-serif);
+            font-size: 1.65rem;
+            line-height: 1.4;
+            color: #ffffff;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 2rem 0;
+            margin: 2.5rem 0;
+            font-style: italic;
+        }
+
+        /* Sticky Table of Contents */
+        .toc-sticky {
+            position: sticky;
+            top: 6rem;
+            max-height: calc(100vh - 8rem);
+            overflow-y: auto;
+        }
+
+        .toc-link {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 0.45rem 0 0.45rem 0.85rem;
+            border-left: 1px solid var(--border-subtle);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .toc-link:hover,
+        .toc-link.active {
+            color: var(--text-main);
+            border-left-color: var(--accent-white);
+            font-weight: 500;
+        }
+
+        /* Timeline UI */
+        .timeline-container {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--border-subtle);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: calc(-1.5rem - 4.5px);
+            top: 0.35rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent-white);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Section Borders */
+        .section-border {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+
+        /* Assessment Checklist */
+        .form-check-input:checked {
+            background-color: var(--accent-white);
+            border-color: var(--accent-white);
+        }
+
+        .form-check-input {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--border-strong);
+            width: 1.25rem;
+            height: 1.25rem;
+            cursor: pointer;
+        }
+
+        /* Progress Bar Style for Coming Soon Cards */
+        .coming-soon-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .coming-soon-progress {
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), var(--accent-white));
+            border-radius: 999px;
+        }
+
+        @media (max-width: 1199.98px) {
+            .navbar-collapse {
+                background: var(--bg-surface);
+                border: 1px solid var(--border-subtle);
+                border-radius: 12px;
+                padding: 1.25rem;
+                margin-top: 0.75rem;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .toc-sticky {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- GLOBAL NAVBAR -->
+    <nav class="navbar navbar-expand-xl navbar-saas fixed-top" aria-label="Global Navigation">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold d-flex align-items-center gap-2 me-auto me-xl-4" href="/">
+                <i class="bi bi-terminal-fill text-white fs-5"></i>
+                <div>
+                    <span class="tracking-tight d-block lh-1">Sandip Jaiswar</span>
+                    <small class="text-muted-custom font-mono fs-8 fw-normal d-none d-md-block mt-1">Engineering Leader
+                        &amp; Career Strategist</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 text-white p-2 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-2 py-3 py-xl-0">
+                    <li class="nav-item"><a class="nav-link px-2" href="#changed">The Shift</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#misconceptions">Misconceptions</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#mistakes">7 Mistakes</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#assessment">Self Assessment</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#funnel">The Funnel</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#action-plan">30-Day Plan</a></li>
+                    <li class="nav-item"><a class="nav-link px-2" href="#next-steps">Next Steps</a></li>
+                    <li class="nav-item ms-xl-2 mt-3 mt-xl-0">
+                        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                            class="btn btn-saas-primary w-100 text-nowrap px-3 py-2">
+                            Book Session
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HEADER / HERO SECTION -->
+    <header class="pt-5 mt-5 pb-5">
+        <div class="container pt-lg-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+
+                    <div
+                        class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill bg-body-tertiary border border-secondary border-opacity-25 mb-4 fs-7 font-mono text-muted-custom">
+                        <span class="badge bg-success rounded-circle p-1"></span>
+                        <span>Software Engineering Career Guide</span>
+                        <span class="opacity-25">•</span>
+                        <span>Updated August 2026</span>
+                    </div>
+
+                    <h1 class="display-3 fw-bold text-white mb-4 tracking-tight" style="line-height: 1.12;">
+                        Why Experienced Software Engineers Aren't Getting Interview Calls
+                    </h1>
+
+                    <p class="fs-4 text-muted-custom mb-4 font-serif"
+                        style="max-width: 780px; margin: 0 auto; font-style: italic;">
+                        A practical breakdown of why developers with 5–15+ years of experience are struggling in today's
+                        hiring market—and how to fix your profile.
+                    </p>
+
+                    <div class="d-flex align-items-center justify-content-center gap-4 text-muted-custom fs-7 font-mono pt-3 border-top border-secondary border-opacity-25"
+                        style="max-width: 500px; margin: 0 auto;">
+                        <div><i class="bi bi-clock me-1"></i> 12 Min Read</div>
+                        <div>•</div>
+                        <div><i class="bi bi-person me-1"></i> Sandip Jaiswar</div>
+                        <div>•</div>
+                        <div><i class="bi bi-check-circle me-1"></i> Tested Career Framework</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN EDITORIAL CONTENT LAYOUT -->
+    <main class="container mb-5">
+        <div class="row justify-content-center g-5">
+
+            <!-- STICKY TABLE OF CONTENTS (Desktop Sidebar) -->
+            <aside class="col-lg-3 d-none d-lg-block">
+                <div class="toc-sticky">
+                    <div class="text-uppercase font-mono text-muted-custom fs-8 tracking-wider mb-3 fw-semibold">On This
+                        Page</div>
+                    <nav id="toc-nav">
+                        <a class="toc-link" href="#changed">1. What Changed in Hiring?</a>
+                        <a class="toc-link" href="#misconceptions">2. What Developers Get Wrong</a>
+                        <a class="toc-link" href="#mistakes">3. The 7 Hiring Mistakes</a>
+                        <a class="toc-link" href="#assessment">4. Self Assessment Checklist</a>
+                        <a class="toc-link" href="#funnel">5. Where Engineers Fail</a>
+                        <a class="toc-link" href="#action-plan">6. 30-Day Action Plan</a>
+                        <a class="toc-link" href="#next-reads">7. Recommended Next Reads</a>
+                        <a class="toc-link" href="#next-steps">8. Choose Your Next Step</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- MAIN EDITORIAL BODY -->
+            <article class="col-lg-8 editorial-body">
+
+                <!-- INTRO LEAD -->
+                <p class="editorial-lead">
+                    A few years ago, an engineer with eight years of experience could set their LinkedIn profile to
+                    "Open to Work" and hear from several recruiters by the end of the day. Today, that same engineer
+                    sends out dozens of applications and gets silent rejections.
+                </p>
+
+                <p>
+                    Most engineers assume the market is completely closed, or that ATS scanners are throwing away their
+                    resumes by mistake. But the real issue is simpler: companies are still hiring senior engineers, but
+                    the way hiring managers evaluate experience has fundamentally changed.
+                </p>
+
+                <!-- SECTION 1: WHAT CHANGED? TIMELINE -->
+                <section id="changed" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">01. Market Shift</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-4">What Changed in Engineering Hiring?</h2>
+
+                    <p>To understand why your applications aren't converting, look at how engineering teams shifted
+                        their hiring goals over the last several years:</p>
+
+                    <div class="timeline-container my-4">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="font-mono text-white fw-bold fs-6">2018–2019: Fast Team Expansion</div>
+                            <p class="text-muted-custom fs-6 mb-0">Companies hired quickly to build new products.
+                                Knowing standard frameworks and language syntax was often enough to secure a solid
+                                interview.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="font-mono text-white fw-bold fs-6">2020–2021: The Remote Hiring Surge</div>
+                            <p class="text-muted-custom fs-6 mb-0">Demand for developers hit record highs. Hiring speed
+                                was everything, and engineering teams hired heavily across all experience levels.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="font-mono text-white fw-bold fs-6">2022–2023: Cost Adjustments &amp;
+                                Restructuring</div>
+                            <p class="text-muted-custom fs-6 mb-0">Companies cut budgets and reduced headcount. The
+                                market flooded with experienced engineers, making every open role far more competitive.
+                            </p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="font-mono text-white fw-bold fs-6">Today: Focus on Business Value &amp; AI Tools
+                            </div>
+                            <p class="text-muted-custom fs-6 mb-0">AI tools handle basic coding tasks effortlessly.
+                                Companies now expect senior engineers to design solid architectures, make clear
+                                trade-offs, and solve real business problems.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout-box">
+                        <div class="font-mono text-white fw-semibold mb-1"><i class="bi bi-lightbulb me-2"></i> Key
+                            Takeaway</div>
+                        <p class="fs-6 text-muted-custom mb-0">Companies haven't stopped hiring experienced developers.
+                            They stopped inviting candidates who only describe basic coding tasks instead of real
+                            engineering impact.</p>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: THE BIGGEST MISCONCEPTION -->
+                <section id="misconceptions" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">02. Common
+                        Misconception</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-4">What Developers Get Wrong About Rejection</h2>
+
+                    <p>When experienced engineers don't get interview calls, they usually try to fix the wrong problem.
+                        Here is how developer assumptions compare with how hiring managers actually review profiles:</p>
+
+                    <div class="row g-4 my-3">
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 border-danger border-opacity-25">
+                                <div class="text-danger font-mono fs-7 mb-2"><i class="bi bi-x-circle me-1"></i> Common
+                                    Developer Assumption</div>
+                                <h3 class="h5 text-white fw-semibold mb-3">"I need to learn another framework."</h3>
+                                <p class="text-muted-custom fs-6 mb-0">Engineers spend weeks picking up new tools,
+                                    certificates, or libraries, thinking their tech stack is the reason they are
+                                    ignored.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 border-success border-opacity-25">
+                                <div class="text-success font-mono fs-7 mb-2"><i class="bi bi-check-circle me-1"></i>
+                                    How Managers Evaluate</div>
+                                <h3 class="h5 text-white fw-semibold mb-3">"Can this engineer make smart trade-offs?"
+                                </h3>
+                                <p class="text-muted-custom fs-6 mb-0">Hiring managers look past long technology lists.
+                                    They want to see practical engineering choices, performance improvements, and
+                                    project outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pull-quote">
+                        "Your resume shouldn't read like a list of technologies you used. It should show the practical
+                        outcomes you delivered for your team and business."
+                    </div>
+                </section>
+
+                <!-- SECTION 3: THE 7 HIRING MISTAKES -->
+                <section id="mistakes" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">03. Common
+                        Pitfalls</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-4">The 7 Mistakes Keeping You from Interviews</h2>
+
+                    <p>Here are the seven most common reasons experienced engineers get passed over during resume
+                        reviews:</p>
+
+                    <div class="row g-4 my-2">
+                        <!-- Mistake 1 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-file-earmark-x text-danger"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 01</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Listing Daily Tasks Instead of Results
+                                        </h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-2">Writing basic statements like "Built frontend
+                                    components using React and TypeScript" without showing what improved.</p>
+                                <div
+                                    class="p-3 rounded-2 bg-dark border border-secondary border-opacity-25 font-mono fs-7 text-success">
+                                    ✓ Better Approach: "Redesigned core page rendering strategy, improving load times by
+                                    40% for over 500k monthly active users."
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 2 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-bounding-box text-warning"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 02</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Weak System Design Explanation</h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Treating system design as basic diagram building
+                                    rather than discussing data flow, caching strategies, state handling, and edge cases
+                                    under real load.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 3 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-linkedin text-info"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 03</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Unoptimized LinkedIn Profile</h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Keeping a generic headline like "Senior Software
+                                    Engineer" instead of clearly showing your main engineering strengths and
+                                    specialization.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 4 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-chat-quote text-primary"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 04</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Unstructured Interview Answers</h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Rambling through behavioral or project questions
+                                    instead of using clear, concise frameworks like Situation-Task-Action-Result (STAR).
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 5 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-speedometer2 text-danger"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 05</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Ignoring Code Cleanliness in Coding Tests
+                                        </h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Rushing to produce working code without
+                                    explaining edge cases, accessibility considerations, readability, or architectural
+                                    decisions.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 6 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-graph-down text-warning"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 06</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Not Showing Leadership or Ownership</h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Failing to mention how you mentor developers,
+                                    establish engineering standards, or collaborate with product managers to deliver
+                                    features.</p>
+                            </div>
+                        </div>
+
+                        <!-- Mistake 7 -->
+                        <div class="col-12">
+                            <div class="saas-card">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <div class="icon-box mb-0"><i class="bi bi-arrow-repeat text-success"></i></div>
+                                    <div>
+                                        <div class="font-mono text-muted-custom fs-8">MISTAKE 07</div>
+                                        <h3 class="h5 text-white fw-bold mb-0">Relying Only on Job Board Applications
+                                        </h3>
+                                    </div>
+                                </div>
+                                <p class="text-muted-custom fs-6 mb-0">Submitting hundreds of applications on public job
+                                    portals without leveraging referrals, direct team outreach, or targeted connections.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: SELF ASSESSMENT AUDIT (Interactive) -->
+                <section id="assessment" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">04. Self
+                        Assessment</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-3">Check Your Profile Readiness</h2>
+                    <p class="text-muted-custom mb-4">Select the statements below that currently describe your resume
+                        and interview preparation:</p>
+
+                    <div class="saas-card p-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input audit-check" type="checkbox" id="check1"
+                                onclick="updateAuditScore()">
+                            <label class="form-check-label text-white fs-6 ms-2" for="check1">
+                                Every bullet on my resume shows a clear outcome or measurable improvement.
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input audit-check" type="checkbox" id="check2"
+                                onclick="updateAuditScore()">
+                            <label class="form-check-label text-white fs-6 ms-2" for="check2">
+                                I can clearly explain system design decisions, data flow, and trade-offs under real
+                                traffic conditions.
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input audit-check" type="checkbox" id="check3"
+                                onclick="updateAuditScore()">
+                            <label class="form-check-label text-white fs-6 ms-2" for="check3">
+                                My LinkedIn profile clearly highlights my engineering specialization and key
+                                achievements.
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input audit-check" type="checkbox" id="check4"
+                                onclick="updateAuditScore()">
+                            <label class="form-check-label text-white fs-6 ms-2" for="check4">
+                                I have structured answers prepared for common questions about technical challenges and
+                                leadership.
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input audit-check" type="checkbox" id="check5"
+                                onclick="updateAuditScore()">
+                            <label class="form-check-label text-white fs-6 ms-2" for="check5">
+                                I can build clean, well-structured components with proper error handling in a 45-minute
+                                coding session.
+                            </label>
+                        </div>
+
+                        <!-- Audit Result Bar -->
+                        <div
+                            class="mt-4 pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+                            <div class="font-mono text-muted-custom fs-7">Your Score:</div>
+                            <div id="audit-score-display" class="font-mono fs-5 fw-bold text-warning">0 / 5 (Needs
+                                Immediate Attention)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: THE MODERN HIRING FUNNEL -->
+                <section id="funnel" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">05. Hiring
+                        Stages</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-4">Where Most Applicants Drop Off</h2>
+
+                    <p>Understanding where candidates get eliminated helps you focus on the right areas of improvement:
+                    </p>
+
+                    <div class="saas-card p-4 my-4 font-mono fs-7">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="text-white">1. Initial Resume Screening</span>
+                            <span class="text-danger">85% Eliminated Here</span>
+                        </div>
+                        <div class="progress mb-4" style="height: 6px; background: rgba(255,255,255,0.05);">
+                            <div class="progress-bar bg-danger" style="width: 15%"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="text-white">2. Recruiter Intro Call</span>
+                            <span class="text-warning">7% Eliminated</span>
+                        </div>
+                        <div class="progress mb-4" style="height: 6px; background: rgba(255,255,255,0.05);">
+                            <div class="progress-bar bg-warning" style="width: 8%"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="text-white">3. Technical Coding Round</span>
+                            <span class="text-warning">4% Eliminated</span>
+                        </div>
+                        <div class="progress mb-4" style="height: 6px; background: rgba(255,255,255,0.05);">
+                            <div class="progress-bar bg-warning" style="width: 4%"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="text-white">4. System Design Discussion</span>
+                            <span class="text-info">2% Eliminated</span>
+                        </div>
+                        <div class="progress mb-4" style="height: 6px; background: rgba(255,255,255,0.05);">
+                            <div class="progress-bar bg-info" style="width: 2%"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <span class="text-white">5. Final Leadership &amp; Offer</span>
+                            <span class="text-success">Top 1% Receives Offer</span>
+                        </div>
+                        <div class="progress mb-0" style="height: 6px; background: rgba(255,255,255,0.05);">
+                            <div class="progress-bar bg-success" style="width: 1%"></div>
+                        </div>
+                    </div>
+
+                    <p class="fs-6 text-muted-custom">
+                        The vast majority of candidates get filtered out at step one. Updating your resume to focus on
+                        clear engineering outcomes produces the fastest improvement in interview calls.
+                    </p>
+                </section>
+
+                <!-- SECTION 6: 30-DAY ACTION PLAN -->
+                <section id="action-plan" class="section-border">
+                    <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">06. Step-by-Step
+                        Guide</span>
+                    <h2 class="fs-1 fw-bold text-white mt-2 mb-4">Your 30-Day Improvement Roadmap</h2>
+
+                    <div class="row g-4 my-2">
+                        <div class="col-md-6">
+                            <div class="saas-card h-100">
+                                <span class="badge bg-secondary-subtle text-white font-mono mb-2">Week 1</span>
+                                <h3 class="h5 text-white fw-bold mb-2">Fix Your Resume Points</h3>
+                                <p class="text-muted-custom fs-6 mb-0">Rewrite every bullet point to highlight project
+                                    outcomes, performance improvements, or team impact.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="saas-card h-100">
+                                <span class="badge bg-secondary-subtle text-white font-mono mb-2">Week 2</span>
+                                <h3 class="h5 text-white fw-bold mb-2">Optimize Your LinkedIn Profile</h3>
+                                <p class="text-muted-custom fs-7 mb-0">Update your headline, summary, and work history
+                                    so recruiters clearly understand your core specialization.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="saas-card h-100">
+                                <span class="badge bg-secondary-subtle text-white font-mono mb-2">Week 3</span>
+                                <h3 class="h5 text-white fw-bold mb-2">Practice System Design Basics</h3>
+                                <p class="text-muted-custom fs-7 mb-0">Review system architecture concepts, component
+                                    structures, caching strategies, and data flow diagrams.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="saas-card h-100">
+                                <span class="badge bg-secondary-subtle text-white font-mono mb-2">Week 4</span>
+                                <h3 class="h5 text-white fw-bold mb-2">Build Strategic Networks</h3>
+                                <p class="text-muted-custom fs-7 mb-0">Reach out directly to engineering leads, ask for
+                                    referrals, and engage in meaningful technical discussions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 7: RECOMMENDED NEXT READS -->
+                <!-- SECTION 7: RECOMMENDED NEXT READS (UPCOMING GUIDES) -->
+                <section id="next-reads" class="section-border">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div>
+                            <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">07. Upcoming
+                                Content</span>
+                            <h2 class="fs-1 fw-bold text-white mt-2">Recommended Next Reads</h2>
+                        </div>
+                        <span class="badge bg-secondary-subtle text-white font-mono d-none d-md-inline-block px-3 py-2">
+                            In Active Production
+                        </span>
+                    </div>
+
+                    <p class="text-muted-custom mb-5">
+                        In-depth, long-form engineering guides currently being drafted. Each guide breaks down specific
+                        technical positioning and interview strategies.
+                    </p>
+
+                    <div class="row g-4 my-2">
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="icon-box mb-0"><i class="bi bi-file-earmark-text text-white"></i>
+                                        </div>
+                                        <span
+                                            class="badge bg-warning-subtle text-warning border border-warning-subtle font-mono fs-8">
+                                            🚧 Coming Soon
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-white fw-semibold mb-2">How to Make Your Resume Stand Out</h3>
+                                    <p class="text-muted-custom fs-7 mb-4">
+                                        A practical guide on turning basic operational task descriptions into
+                                        high-impact engineering metric statements.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-secondary border-opacity-25">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center fs-8 font-mono text-muted-custom mb-2">
+                                        <span>Currently being written</span>
+                                        <span>80% Complete</span>
+                                    </div>
+                                    <div class="coming-soon-bar">
+                                        <div class="coming-soon-progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="icon-box mb-0"><i class="bi bi-linkedin text-info"></i></div>
+                                        <span
+                                            class="badge bg-warning-subtle text-warning border border-warning-subtle font-mono fs-8">
+                                            🚧 Coming Soon
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-white fw-semibold mb-2">LinkedIn Profile Guide for Developers
+                                    </h3>
+                                    <p class="text-muted-custom fs-7 mb-4">
+                                        How to structure your headline, about section, and work history for optimal
+                                        inbound recruiter search reach.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-secondary border-opacity-25">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center fs-8 font-mono text-muted-custom mb-2">
+                                        <span>Drafting in progress</span>
+                                        <span>65% Complete</span>
+                                    </div>
+                                    <div class="coming-soon-bar">
+                                        <div class="coming-soon-progress" style="width: 65%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="icon-box mb-0"><i class="bi bi-diagram-3 text-warning"></i></div>
+                                        <span
+                                            class="badge bg-warning-subtle text-warning border border-warning-subtle font-mono fs-8">
+                                            🚧 Coming Soon
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-white fw-semibold mb-2">Frontend System Design Roadmap</h3>
+                                    <p class="text-muted-custom fs-7 mb-4">
+                                        Key concepts, client-side architecture patterns, caching models, and data flow
+                                        strategies for senior interview rounds.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-secondary border-opacity-25">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center fs-8 font-mono text-muted-custom mb-2">
+                                        <span>Diagrams & Architecture Review</span>
+                                        <span>50% Complete</span>
+                                    </div>
+                                    <div class="coming-soon-bar">
+                                        <div class="coming-soon-progress" style="width: 50%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <div class="icon-box mb-0"><i class="bi bi-cpu text-success"></i></div>
+                                        <span
+                                            class="badge bg-warning-subtle text-warning border border-warning-subtle font-mono fs-8">
+                                            🚧 Coming Soon
+                                        </span>
+                                    </div>
+                                    <h3 class="h5 text-white fw-semibold mb-2">AI Tools for Software Engineers</h3>
+                                    <p class="text-muted-custom fs-7 mb-4">
+                                        How to leverage modern coding assistants effectively without sacrificing deep
+                                        architectural decision-making.
+                                    </p>
+                                </div>
+                                <div class="pt-3 border-top border-secondary border-opacity-25">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center fs-8 font-mono text-muted-custom mb-2">
+                                        <span>Research & Outline Phase</span>
+                                        <span>35% Complete</span>
+                                    </div>
+                                    <div class="coming-soon-bar">
+                                        <div class="coming-soon-progress" style="width: 35%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FULL-WIDTH PREMIUM CALLOUT SECTION -->
+                    <div class="mt-5 p-4 p-md-5 rounded-4 border text-center"
+                        style="background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.04) 0%, rgba(15, 16, 19, 1) 100%); border-color: var(--border-subtle) !important;">
+                        <span class="badge-saas mb-3">
+                            <span class="badge-dot"></span>
+                            Resource Hub Available
+                        </span>
+                        <h3 class="fs-2 fw-bold text-white mb-3">Continue Your Career Journey</h3>
+                        <p class="text-muted-custom mx-auto mb-4" style="max-width: 680px;">
+                            While these detailed guides are being prepared, you can already explore my complete
+                            collection of free resources, YouTube videos, digital products, and mentorship on the
+                            homepage.
+                        </p>
+                        <div class="mb-3">
+                            <a href="/" class="btn btn-saas-primary btn-lg px-4">
+                                Explore Homepage <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                        <p class="text-muted-custom fs-7 mb-0 font-mono">
+                            More in-depth career guides are added regularly.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SECTION 8: CHOOSE YOUR NEXT STEP (4 PREMIUM CARDS) -->
+                <section id="next-steps" class="section-border">
+                    <div class="text-center mb-5">
+                        <span class="text-uppercase font-mono text-muted-custom fs-7 tracking-wider">08. Take
+                            Action</span>
+                        <h2 class="fs-1 fw-bold text-white mt-2">Choose Your Next Step</h2>
+                        <p class="text-muted-custom mx-auto" style="max-width: 600px;">
+                            Select the resource that best fits your current career goals and immediate preparation
+                            needs.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <div class="icon-box"><i class="bi bi-journal-bookmark text-white"></i></div>
+                                    <h3 class="h4 text-white fw-bold mb-2">Career Guides</h3>
+                                    <p class="text-muted-custom fs-6 mb-4">
+                                        Read practical guides on resumes, interviews, LinkedIn profiles, AI tools,
+                                        career growth, and system design.
+                                    </p>
+                                </div>
+                                <a href="/" class="btn btn-saas-secondary w-100 text-center">
+                                    Browse Career Guides
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <div class="icon-box"><i class="bi bi-youtube text-danger"></i></div>
+                                    <h3 class="h4 text-white fw-bold mb-2">YouTube Videos</h3>
+                                    <p class="text-muted-custom fs-6 mb-4">
+                                        Watch free videos where I explain hiring trends, interview preparation
+                                        strategies, and engineering career advice.
+                                    </p>
+                                </div>
+                                <a href="https://www.youtube.com/@sandipjaiswar3012/videos" target="_blank"
+                                    rel="noopener" class="btn btn-saas-secondary w-100 text-center">
+                                    Watch Free Videos
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <div class="icon-box"><i class="bi bi-box-seam text-info"></i></div>
+                                    <h3 class="h4 text-white fw-bold mb-2">Digital Products</h3>
+                                    <p class="text-muted-custom fs-6 mb-4">
+                                        Download resume templates, system design frameworks, and practical career
+                                        toolkits designed for engineers.
+                                    </p>
+                                </div>
+                                <a href="/#systems" class="btn btn-saas-secondary w-100 text-center">
+                                    Explore Digital Products
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-md-6">
+                            <div class="saas-card h-100 d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <div class="icon-box"><i class="bi bi-person-video3 text-success"></i></div>
+                                    <h3 class="h4 text-white fw-bold mb-2">1:1 Mentorship</h3>
+                                    <p class="text-muted-custom fs-6 mb-4">
+                                        Need personalized feedback on your resume, interview strategy, or career
+                                        roadmap? Book a direct session.
+                                    </p>
+                                </div>
+                                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                                    class="btn btn-saas-primary w-100 text-center">
+                                    Book Strategy Session
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="section-border py-5">
+        <div class="container">
+            <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-center fs-7 text-muted-custom">
+                <div>&copy; 2026 Sandip Jaiswar. All rights reserved.</div>
+                <div class="mt-2 mt-sm-0 font-mono fs-8">Software Engineering Career Platform</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Interactive Features Script -->
+    <script>
+        // Reading Progress Bar
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Assessment Checklist Score Calculator
+        function updateAuditScore() {
+            var checkboxes = document.querySelectorAll('.audit-check');
+            var score = 0;
+            checkboxes.forEach(function (cb) {
+                if (cb.checked) score++;
+            });
+
+            var display = document.getElementById('audit-score-display');
+            if (score <= 2) {
+                display.className = "font-mono fs-5 fw-bold text-danger";
+                display.innerText = score + " / 5 (Needs Immediate Attention)";
+            } else if (score <= 4) {
+                display.className = "font-mono fs-5 fw-bold text-warning";
+                display.innerText = score + " / 5 (Good Progress, Some Gaps)";
+            } else {
+                display.className = "font-mono fs-5 fw-bold text-success";
+                display.innerText = score + " / 5 (Strong Profile Readiness)";
+            }
+        }
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://sandipjaiswar.com/why-experienced-engineers-not-getting-interview-calls.html#article",
+          "headline": "Why Experienced Software Engineers Aren't Getting Interview Calls",
+          "description": "A practical breakdown of why developers with 5–15+ years of experience are struggling in today's hiring market—and how to fix your profile.",
+          "author": {
+            "@type": "Person",
+            "name": "Sandip Jaiswar",
+            "url": "https://sandipjaiswar.com"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Sandip Jaiswar"
+          },
+          "datePublished": "2026-08-01",
+          "dateModified": "2026-08-06"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://sandipjaiswar.com/why-experienced-engineers-not-getting-interview-calls.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://sandipjaiswar.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Why Experienced Engineers Aren't Getting Interview Calls"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sandipjaiswar.com/why-experienced-engineers-not-getting-interview-calls.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why are experienced developers getting passed over during resume reviews?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Experienced developers are often passed over when their resumes list daily operational tasks rather than clear project outcomes, engineering performance metrics, and business impact."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How have AI tools changed software engineering hiring expectations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI tools handle basic code generation easily. Employers now evaluate senior candidates primarily on system architecture, trade-off decisions, and cross-functional leadership."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+</body>
+
+</html>
