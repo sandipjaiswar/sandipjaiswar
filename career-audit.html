@@ -4,58 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Career Audit for Developers | Sandip Jaiswar</title>
+    <title>Free Career Resources for Developers | Sandip Jaiswar</title>
     <meta name="description"
-        content="Take a free 5-minute career audit designed for experienced software developers. Identify gaps in positioning, resume, interviews and career strategy.">
-    <link rel="canonical" href="https://sandipjaiswar.com/career-audit">
+        content="Practical frameworks, checklists, and guides to help experienced software developers position their experience, excel in interviews, and navigate career growth.">
+    <link rel="canonical" href="https://sandipjaiswar.com/">
 
-    <!-- Analytics Placeholders -->
-    <!-- Google Analytics: <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script> -->
-    <!-- Meta Pixel: <script> ... </script> -->
-    <!-- LinkedIn Insight Tag: <script> ... </script> -->
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Career Resources for Developers | Sandip Jaiswar">
+    <meta property="og:description"
+        content="Practical frameworks, checklists, and guides created by Sandip Jaiswar (14+ yrs in Software Engineering) to help developers grow.">
+    <meta property="og:url" content="https://sandipjaiswar.com/">
+    <meta property="og:image" content="https://sandipjaiswar.com/og-image.jpg">
+
+    <!-- Favicon Placeholder -->
+    <link rel="icon" href="favicon.ico" sizes="any">
 
     <style>
+        /* DESIGN SYSTEM & VARIABLES */
         :root {
-            --bg-color: #0B0F14;
-            --card-bg: #11161D;
-            --card-border: #1F2937;
+            --bg-main: #0B0F14;
+            --bg-card: #11161D;
+            --bg-card-hover: #171E28;
+            --border-color: #1F2937;
+            --border-focus: #8B5CF6;
             --text-main: #FFFFFF;
-            --text-muted: #A7A7A7;
+            --text-muted: #9CA3AF;
             --accent-purple: #8B5CF6;
             --accent-gradient: linear-gradient(135deg, #A855F7 0%, #6366F1 100%);
-            --accent-hover: #7C3AED;
-            --bar-bg: #1A222D;
-            --radius: 12px;
-            --transition: all 0.3s ease;
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-main);
             color: var(--text-main);
+            font-family: var(--font-stack);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 880px;
+            max-width: 1024px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* Typography Utilities */
+        /* TYPOGRAPHY */
         h1,
         h2,
-        h3 {
-            line-height: 1.25;
+        h3,
+        h4 {
+            line-height: 1.2;
             font-weight: 700;
             letter-spacing: -0.02em;
+        }
+
+        p {
+            color: var(--text-muted);
         }
 
         .gradient-text {
@@ -64,23 +83,25 @@
             -webkit-text-fill-color: transparent;
         }
 
-        p {
-            color: var(--text-muted);
-        }
-
-        /* Buttons */
+        /* BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 8px;
             padding: 14px 28px;
-            border-radius: var(--radius);
+            border-radius: var(--radius-sm);
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
             text-decoration: none;
             transition: var(--transition);
-            border: none;
+            border: 1px solid transparent;
+            outline: none;
+        }
+
+        .btn:focus-visible {
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
         }
 
         .btn-primary {
@@ -97,19 +118,19 @@
         .btn-secondary {
             background: transparent;
             color: var(--text-main);
-            border: 1px solid var(--card-border);
+            border-color: var(--border-color);
         }
 
         .btn-secondary:hover {
             border-color: var(--accent-purple);
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .btn-full {
             width: 100%;
         }
 
-        /* Header / Nav */
+        /* HEADER / NAV */
         nav {
             padding: 24px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -128,237 +149,357 @@
             text-decoration: none;
         }
 
-        /* Hero Section */
+        /* SECTION 1: HERO */
         .hero {
-            padding: 80px 0 60px;
+            padding: 96px 0 64px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.75rem;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            max-width: 640px;
-            margin: 0 auto 32px;
+            font-size: 1.25rem;
+            max-width: 680px;
+            margin: 0 auto 28px;
         }
 
-        .trust-badge {
+        .credibility-line {
             font-size: 0.875rem;
             color: var(--text-muted);
-            margin-top: 16px;
+            margin-bottom: 36px;
         }
 
-        /* Problem Section */
-        .problem {
-            padding: 60px 0;
-            border-top: 1px solid var(--card-border);
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .problem-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
+        /* SECTION 2: TRUST / POSITIONING */
+        .trust-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .trust-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
             padding: 40px;
         }
 
-        .problem h2 {
+        .trust-card h2 {
             font-size: 1.8rem;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
-        .problem-list {
-            list-style: none;
-            margin: 24px 0;
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 28px;
         }
 
-        .problem-list li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-        }
-
-        .problem-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent-purple);
-        }
-
-        .insight-callout {
-            border-left: 3px solid var(--accent-purple);
-            padding-left: 16px;
-            margin-top: 24px;
-            font-weight: 600;
+        .trust-item {
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
             color: var(--text-main);
         }
 
-        /* Audit Section */
-        .audit-section {
-            padding: 60px 0;
-            scroll-margin-top: 40px;
+        /* SECTION 3: RESOURCE COLLECTION */
+        .resources-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
         }
 
-        .audit-container {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 40px;
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
         }
 
-        .progress-bar-wrapper {
-            width: 100%;
-            height: 6px;
-            background: var(--bar-bg);
-            border-radius: 3px;
-            margin-bottom: 32px;
-            overflow: hidden;
-        }
-
-        .progress-bar-fill {
-            height: 100%;
-            width: 10%;
-            background: var(--accent-gradient);
-            transition: width 0.3s ease;
-        }
-
-        .question-step {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--accent-purple);
+        .section-title h2 {
+            font-size: 2rem;
             margin-bottom: 12px;
-            font-weight: 600;
         }
 
-        .question-title {
-            font-size: 1.35rem;
-            margin-bottom: 28px;
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
         }
 
-        .options-grid {
+        .resource-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-        }
-
-        .option-btn {
-            background: var(--bg-color);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 16px 20px;
-            text-align: left;
-            color: var(--text-main);
-            cursor: pointer;
-            font-size: 1rem;
+            justify-content: space-between;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
-        .option-btn:hover {
-            border-color: var(--accent-purple);
-            background: rgba(139, 92, 246, 0.05);
+        .resource-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
         }
 
-        /* Results Section */
-        .results-section {
-            display: none;
-            padding: 60px 0;
+        .resource-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
         }
 
-        .results-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 40px;
-        }
-
-        .score-overview {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .score-number {
-            font-size: 4rem;
-            font-weight: 800;
-            margin: 10px 0;
-        }
-
-        .score-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: rgba(139, 92, 246, 0.15);
-            border: 1px solid var(--accent-purple);
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .category-scores {
-            margin: 32px 0;
-        }
-
-        .category-row {
-            margin-bottom: 18px;
-        }
-
-        .category-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 6px;
+        .resource-card p {
             font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
         }
 
-        .cat-bar-bg {
-            height: 8px;
-            background: var(--bar-bg);
-            border-radius: 4px;
+        .card-btn {
+            background: transparent;
+            color: var(--accent-purple);
+            border: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 0;
+            text-align: left;
+        }
+
+        .card-btn:hover {
+            color: #A855F7;
+        }
+
+        /* SECTION: READY TO GO DEEPER? */
+        .next-steps-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .next-steps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .next-step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .next-step-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .next-step-card.featured {
+            border-color: rgba(139, 92, 246, 0.4);
+            background: linear-gradient(180deg, var(--bg-card) 0%, rgba(23, 30, 40, 0.6) 100%);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .next-step-card.featured::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            border-top-left-radius: var(--radius-md);
+            border-top-right-radius: var(--radius-md);
+        }
+
+        .card-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .featured .card-label {
+            color: var(--accent-purple);
+        }
+
+        .next-step-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .next-step-card p {
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+            flex-grow: 1;
+        }
+
+        /* SECTION 5: VALUE PROMISE */
+        .value-promise {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .promise-card {
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .promise-card h2 {
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+        }
+
+        /* SECTION 6: SOFT SERVICE CTA */
+        .service-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
             overflow: hidden;
         }
 
-        .cat-bar-fill {
-            height: 100%;
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
             background: var(--accent-gradient);
-            width: 0%;
-            transition: width 0.6s ease;
         }
 
-        .insight-box {
-            background: var(--bg-color);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin-top: 32px;
-        }
-
-        .insight-box h4 {
+        .service-card h2 {
+            font-size: 1.8rem;
             margin-bottom: 12px;
-            font-size: 1.1rem;
         }
 
-        .recommendations-list {
-            margin-top: 16px;
-            padding-left: 20px;
+        .service-pillars {
+            font-size: 0.875rem;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 20px;
+            font-weight: 600;
         }
 
-        .recommendations-list li {
-            margin-bottom: 8px;
-            color: var(--text-muted);
+        /* SECTION 7: ABOUT SANDIP */
+        .about-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
         }
 
-        /* Lead Form */
-        .lead-section {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
             padding: 40px;
-            margin-top: 40px;
+        }
+
+        .about-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+
+        .about-card p {
+            margin-bottom: 12px;
+        }
+
+        /* MODAL SYSTEM */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 15, 20, 0.85);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transform: translateY(12px);
+            transition: transform 0.25s ease;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--text-main);
         }
 
         .form-group {
@@ -367,153 +508,186 @@
 
         .form-group label {
             display: block;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-bottom: 6px;
-            color: var(--text-muted);
+            color: var(--text-main);
         }
 
         .form-control {
             width: 100%;
             padding: 12px 16px;
-            background: var(--bg-color);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
             color: var(--text-main);
-            font-size: 1rem;
+            font-size: 0.95rem;
             outline: none;
             transition: var(--transition);
         }
 
         .form-control:focus {
-            border-color: var(--accent-purple);
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
         }
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
         }
 
-        .form-disclaimer {
-            font-size: 0.8rem;
+        .checkbox-group input {
+            margin-top: 4px;
+            accent-color: var(--accent-purple);
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
             color: var(--text-muted);
+        }
+
+        /* SUCCESS MODAL TWO-PATH OFFER STYLING */
+        .post-download-offers {
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .post-download-offers h4 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 16px;
             text-align: center;
-            margin-top: 12px;
         }
 
-        /* Service CTA */
-        .service-cta {
-            padding: 60px 0;
-            border-top: 1px solid var(--card-border);
+        .offer-block {
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin-bottom: 12px;
+            transition: var(--transition);
         }
 
-        .service-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 40px;
-            text-align: center;
+        .offer-block:last-child {
+            margin-bottom: 0;
         }
 
-        .service-list {
-            display: flex;
-            flex-wrap: wrap;
+        .offer-block:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .offer-block h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .offer-block p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .btn-offer-primary {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            gap: 12px;
-            margin: 24px 0 32px;
-            list-style: none;
+            width: 100%;
+            padding: 10px 16px;
+            background: var(--accent-gradient);
+            color: #FFFFFF;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
         }
 
-        .service-pill {
-            background: var(--bg-color);
-            border: 1px solid var(--card-border);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
+        .btn-offer-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
         }
 
-        .cta-group {
-            display: flex;
-            gap: 16px;
+        .btn-offer-secondary {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
+            width: 100%;
+            padding: 10px 16px;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
         }
 
-        /* About Section */
-        .about {
-            padding: 60px 0;
-            border-top: 1px solid var(--card-border);
+        .btn-offer-secondary:hover {
+            border-color: var(--accent-purple);
+            background: rgba(255, 255, 255, 0.03);
         }
 
-        .about-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 40px;
-        }
-
-        /* FAQ */
-        .faq {
-            padding: 60px 0;
-            border-top: 1px solid var(--card-border);
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 32px;
-        }
-
-        .faq-item {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius);
-            padding: 24px;
-        }
-
-        .faq-item h4 {
-            margin-bottom: 8px;
-        }
-
-        /* Footer / Final CTA */
-        .final-cta {
-            padding: 80px 0;
-            text-align: center;
-            border-top: 1px solid var(--card-border);
-        }
-
+        /* FOOTER */
         footer {
-            padding: 32px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 48px 0;
+            border-top: 1px solid var(--border-color);
             text-align: center;
             font-size: 0.875rem;
         }
 
-        /* Mobile Responsive */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+
+        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
 
-            .form-grid {
-                grid-template-columns: 1fr;
+            .hero p {
+                font-size: 1.1rem;
             }
 
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-group {
+            .hero-ctas {
                 flex-direction: column;
             }
 
-            .problem-card,
-            .audit-container,
-            .results-card,
-            .lead-section,
+            .btn {
+                width: 100%;
+            }
+
+            .trust-card,
             .service-card,
-            .about-card {
+            .about-card,
+            .modal-card {
                 padding: 24px;
+            }
+
+            .resource-grid,
+            .next-steps-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -525,599 +699,458 @@
     <nav>
         <div class="container nav-content">
             <a href="https://sandipjaiswar.com" class="brand">Sandip Jaiswar</a>
-            <a href="#audit" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.875rem;">Take Audit</a>
+            <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener" class="btn btn-secondary"
+                style="padding: 8px 16px; font-size: 0.875rem;">1:1 Strategy</a>
         </div>
     </nav>
 
     <!-- Section 1: Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Is Your Career Stuck — <br><span class="gradient-text">Or Is Your Positioning?</span></h1>
-            <p>Take this free 5-minute Career Audit to identify the biggest gaps between your engineering experience and
-                the opportunities you want.</p>
-            <a href="#audit" id="start-audit-btn" class="btn btn-primary">Start My Free Career Audit</a>
-            <div class="trust-badge">Built by Sandip Jaiswar • 14+ years in software engineering</div>
+            <h1>Free Career Resources <br><span class="gradient-text">for Developers</span></h1>
+            <p>Practical frameworks, checklists, and guides to help you position your experience, prepare for
+                interviews, and make your next career move with clarity.</p>
+            <div class="credibility-line">Created by Sandip Jaiswar • 14+ years in software engineering</div>
+            <div class="hero-ctas">
+                <a href="#resources" class="btn btn-primary">Get the Free Career Toolkit →</a>
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                    class="btn btn-secondary">Explore 1:1 Career Strategy</a>
+            </div>
         </div>
     </section>
 
-    <!-- Section 2: Problem -->
-    <section class="problem">
+    <!-- Section 2: Trust / Positioning -->
+    <section class="trust-section">
         <div class="container">
-            <div class="problem-card">
-                <h2>Being good at your job isn't always enough.</h2>
-                <p>Many experienced software developers are technically strong but still struggle with:</p>
-                <ul class="problem-list">
-                    <li>Getting shortlisted for senior or staff positions</li>
-                    <li>Explaining their high-level impact beyond day-to-day code</li>
-                    <li>Standing out from dozens of similar candidate resumes</li>
-                    <li>Handling senior-level architectural and behavioral interviews</li>
-                    <li>Knowing what strategic career move to execute next</li>
-                </ul>
-                <div class="insight-callout">
-                    The problem isn't always your experience. Sometimes it's how that experience is positioned.
+            <div class="trust-card">
+                <h2>Good developers don't always get good opportunities.</h2>
+                <p>Career progression in tech is rarely a pure meritocracy of technical ability. Growing your senior
+                    career requires distinct non-coding skill sets:</p>
+                <div class="trust-grid">
+                    <div class="trust-item">→ Strategic positioning for target roles</div>
+                    <div class="trust-item">→ Resumes that highlight business impact</div>
+                    <div class="trust-item">→ High-level technical storytelling</div>
+                    <div class="trust-item">→ Clear long-term career direction</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Audit Interactive Container -->
-    <section class="audit-section" id="audit">
+    <!-- Section 3: Resource Collection -->
+    <section class="resources-section" id="resources">
         <div class="container">
-            <div class="audit-container" id="audit-box">
-                <div class="progress-bar-wrapper">
-                    <div class="progress-bar-fill" id="progress-bar"></div>
-                </div>
-                <div class="question-step" id="question-step">Question 1 of 10</div>
-                <h3 class="question-title" id="question-text">Loading question...</h3>
-                <div class="options-grid" id="options-container">
-                    <!-- Dynamically populated options -->
-                </div>
+            <div class="section-title">
+                <h2>Select a Resource</h2>
+                <p>Direct, actionable toolkits built from senior engineering experience.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Section 4 & 5: Results & Personalized Insights -->
-    <section class="results-section" id="results">
-        <div class="container">
-            <div class="results-card">
-                <div class="score-overview">
-                    <p style="font-size: 1.1rem; color: var(--text-main);">Your Career Readiness Score</p>
-                    <div class="score-number gradient-text" id="total-score-val">0</div>
-                    <div class="score-badge" id="score-category-label">Evaluating...</div>
-                </div>
+            <div class="resource-grid">
 
-                <h3 style="margin-bottom: 20px;">Category Breakdown</h3>
-                <div class="category-scores" id="category-bars-container">
-                    <!-- Dynamically populated bars -->
-                </div>
-
-                <div class="insight-box">
-                    <h4>Your Biggest Opportunity</h4>
-                    <p id="dynamic-insight-text">Analyzing your responses...</p>
-                    <ol class="recommendations-list" id="dynamic-recommendations">
-                        <!-- Dynamic bullets -->
-                    </ol>
-                </div>
-
-                <!-- Section 6: Styled Lead Capture Form -->
-                <div class="lead-section" id="lead-form-container">
-                    <div class="lead-header">
-                        <h3>Want a deeper, customized breakdown?</h3>
-                        <p>I can help you identify the specific gaps between your current engineering positioning and
-                            the role you're targeting.</p>
+                <div class="resource-card">
+                    <div>
+                        <h3>Developer Career Audit</h3>
+                        <p>Identify the specific gaps between where your career is today and where you want it to go.
+                        </p>
                     </div>
+                    <button class="card-btn" onclick="openResourceModal('Developer Career Audit', 'careerAudit')">Get
+                        Free Resource →</button>
+                </div>
 
-                    <form action="https://formsubmit.co/sandipjaiswar@gmail.com" method="POST" id="lead-form"
-                        class="audit-form">
+                <div class="resource-card">
+                    <div>
+                        <h3>Resume Review Checklist</h3>
+                        <p>A practical checklist to identify weak points and duty-heavy language in your developer
+                            resume.</p>
+                    </div>
+                    <button class="card-btn"
+                        onclick="openResourceModal('Resume Review Checklist', 'resumeChecklist')">Get Free Resource
+                        →</button>
+                </div>
 
-                        <!-- Hidden Inputs for FormSubmit Configuration -->
-                        <input type="hidden" name="_subject" value="New Developer Career Audit Lead">
-                        <input type="hidden" name="_next" value="https://sandipjaiswar.com/career-audit/thanks.html">
-                        <input type="hidden" name="_template" value="table">
+                <div class="resource-card">
+                    <div>
+                        <h3>Senior Interview Prep Checklist</h3>
+                        <p>Prepare for technical, behavioral, and architectural conversations without memorizing generic
+                            answers.</p>
+                    </div>
+                    <button class="card-btn"
+                        onclick="openResourceModal('Senior Interview Prep Checklist', 'interviewChecklist')">Get Free
+                        Resource →</button>
+                </div>
 
-                        <!-- Hidden Field: Dynamically Populated with Audit Score -->
-                        <input type="hidden" name="audit_score" id="hidden-audit-score" value="Not completed yet">
-                        <input type="hidden" name="lowest_category" id="hidden-lowest-category" value="None">
+                <div class="resource-card">
+                    <div>
+                        <h3>Career Positioning Framework</h3>
+                        <p>Turn your accumulated years of engineering experience into a clear, cohesive professional
+                            story.</p>
+                    </div>
+                    <button class="card-btn"
+                        onclick="openResourceModal('Career Positioning Framework', 'positioningFramework')">Get Free
+                        Resource →</button>
+                </div>
 
-                        <!-- Row 1: Name & Email -->
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="lead-name">Your Name <span class="required">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="text" id="lead-name" name="name" class="form-control"
-                                        placeholder="e.g. Alex Chen" required>
-                                </div>
-                            </div>
+                <div class="resource-card">
+                    <div>
+                        <h3>Promotion Readiness Checklist</h3>
+                        <p>Evaluate whether you're genuinely ready for the next level—beyond simply adding years of
+                            experience.</p>
+                    </div>
+                    <button class="card-btn"
+                        onclick="openResourceModal('Promotion Readiness Checklist', 'promotionChecklist')">Get Free
+                        Resource →</button>
+                </div>
+                <div class="resource-card">
+                    <div>
+                        <h3>Frontend Developer → AI Roadmap</h3>
+                        <p>A practical guide to help frontend developers understand what to learn first, what to skip,
+                            and how to start building AI-powered applications.</p>
+                    </div>
+                    <button class="card-btn"
+                        onclick="openResourceModal('Frontend Developer → AI Roadmap', 'frontendToAI')">
+                        Get Free Resource →
+                    </button>
+                </div>
 
-                            <div class="form-group">
-                                <label for="lead-email">Your Email <span class="required">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="email" id="lead-email" name="email" class="form-control"
-                                        placeholder="alex@example.com" required>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    </section>
 
-                        <!-- Row 2: Roles -->
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="current-role">Current Role <span class="required">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="text" id="current-role" name="current_role" class="form-control"
-                                        placeholder="e.g. Senior React Developer" required>
-                                </div>
-                            </div>
+    <!-- SECTION: READY TO GO DEEPER? -->
+    <section class="next-steps-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="eyebrow">READY TO GO DEEPER?</div>
+                <h2>Free resources are the starting point. Your next move depends on what you need.</h2>
+                <p style="max-width: 720px; margin: 12px auto 0;">
+                    If you know what you need to work on, use a structured system and do it yourself.<br>
+                    If you want someone to look at your situation with you, get personalized guidance.
+                </p>
+            </div>
 
-                            <div class="form-group">
-                                <label for="target-role">Target Role <span class="required">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="text" id="target-role" name="target_role" class="form-control"
-                                        placeholder="e.g. Frontend Architect / Tech Lead" required>
-                                </div>
-                            </div>
-                        </div>
+            <div class="next-steps-grid">
+                <!-- CARD 1 — DIGITAL PRODUCT -->
+                <div class="next-step-card">
+                    <div>
+                        <div class="card-label">DO IT YOURSELF</div>
+                        <h3>Build your career strategy with a proven system.</h3>
+                        <p>Structured resources for developers who want to improve their positioning, interviews, career
+                            direction, and growth without figuring everything out from scratch.</p>
+                    </div>
+                    <a href="https://topmate.io/sandip_jaiswar" target="_blank" rel="noopener"
+                        class="btn btn-secondary btn-full">
+                        Explore Digital Products →
+                    </a>
+                </div>
 
-                        <!-- Row 3: Optional LinkedIn Profile -->
-                        <div class="form-group">
-                            <label for="linkedin">LinkedIn Profile URL <span class="optional">(Optional)</span></label>
-                            <div class="input-wrapper">
-                                <input type="url" id="linkedin" name="linkedin_url" class="form-control"
-                                    placeholder="https://linkedin.com/in/yourprofile">
-                            </div>
-                        </div>
-
-                        <!-- Submit Button & Anti-Spam Disclaimer -->
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary btn-full submit-btn">
-                                <span>Get My Full Career Strategy Breakdown</span>
-                                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </button>
-                            <div class="form-disclaimer">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
-                                <span>No spam. Just your customized results and useful developer career
-                                    resources.</span>
-                            </div>
-                        </div>
-
-                    </form>
+                <!-- CARD 2 — 1:1 SESSION -->
+                <div class="next-step-card featured">
+                    <div>
+                        <div class="card-label">WANT PERSONALIZED HELP?</div>
+                        <h3>Get clarity on your next career move.</h3>
+                        <p>A focused 1:1 session to identify what is holding your career back, where your positioning is
+                            weak, and what you should work on next.</p>
+                    </div>
+                    <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                        class="btn btn-primary btn-full">
+                        Book a 1:1 Career Strategy →
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 7: Soft Service CTA -->
-    <section class="service-cta">
+    <!-- Section 5: Value Promise -->
+    <section class="value-promise">
+        <div class="container">
+            <div class="promise-card">
+                <h2>Free doesn't mean generic.</h2>
+                <p>These resources are built from real-world software engineering and leadership experience—designed to
+                    help you make better decisions, not just consume more career advice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Soft Service CTA -->
+    <section class="service-section">
         <div class="container">
             <div class="service-card">
-                <h3>Need hands-on help closing these gaps?</h3>
-                <p style="margin-top: 8px;">I work 1:1 with experienced engineers to systematically upgrade their market
-                    value.</p>
-                <ul class="service-list">
-                    <li class="service-pill">Career Positioning</li>
-                    <li class="service-pill">Resume Strategy</li>
-                    <li class="service-pill">Interview Preparation</li>
-                    <li class="service-pill">Career Direction</li>
-                    <li class="service-pill">Senior/Leadership Growth</li>
-                </ul>
-                <div class="cta-group">
-                    <a href="https://sandipjaiswar.com" target="_blank" id="service-1on1-btn"
-                        class="btn btn-primary">Explore 1:1 Career Strategy</a>
-                    <a href="#lead-form" class="btn btn-secondary">Just Send Me Free Resources</a>
-                </div>
+                <h2>Want help applying this to your situation?</h2>
+                <p style="max-width: 600px; margin: 8px auto 24px;">Sometimes the problem isn't your experience. It's
+                    how that experience is positioned, communicated, and applied to your next move.</p>
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                    class="btn btn-primary">Explore 1:1 Career Strategy →</a>
+                <div class="service-pillars">Resume • Positioning • Interview Strategy • Career Direction</div>
             </div>
         </div>
     </section>
 
-    <!-- Section 8: About Sandip -->
-    <section class="about">
+    <!-- Section 7: About Sandip -->
+    <section class="about-section">
         <div class="container">
             <div class="about-card">
-                <h3>Why I built this</h3>
-                <p style="margin-top: 16px;">I've spent 14+ years in software engineering, growing from frontend
-                    development into technical leadership and architecture.</p>
-                <p style="margin-top: 12px;">Along the way, I've interviewed engineers, reviewed resumes, worked
-                    directly with product and business leadership, and observed high-performing developers get
-                    overlooked simply because their experience wasn't articulated clearly.</p>
-                <p style="margin-top: 12px;">This diagnostic is designed to give you an objective view of how the market
-                    sees your profile—without fluff or generic advice.</p>
+                <h2>Built by someone who's been on both sides of the interview.</h2>
+                <p>I've spent 14+ years in software engineering, evolving from frontend engineering into technical
+                    leadership and architecture.</p>
+                <p>Along the way, I've conducted technical interviews, evaluated resumes, worked with product and
+                    business teams, and helped developers position their work to secure stronger roles.</p>
             </div>
         </div>
     </section>
 
-    <!-- Section 9: Social Proof Placeholder -->
-    <section style="padding: 40px 0; text-align: center;">
-        <div class="container">
-            <p
-                style="font-size: 0.875rem; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;">
-                Developer Case Studies & Feedback Coming Soon</p>
-        </div>
-    </section>
+    <!-- Section 4: Lead Capture Modal -->
+    <div class="modal-overlay" id="leadModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close dialog">&times;</button>
 
-    <!-- Section 10: FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Is this really free?</h4>
-                    <p>Yes. You get immediate access to your calculated breakdown on screen and actionable steps.</p>
+            <!-- In-Place Success Message Container -->
+            <div id="modalSuccessState" style="display: none; text-align: center; padding: 4px 0;">
+                <div
+                    style="width: 48px; height: 48px; background: rgba(139, 92, 246, 0.15); border: 1px solid var(--accent-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                 </div>
-                <div class="faq-item">
-                    <h4>How long does it take?</h4>
-                    <p>The audit contains 10 questions and takes about 3 to 5 minutes to complete.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Is this only for frontend developers?</h4>
-                    <p>No. While I specialize in Frontend Architecture, the positioning and interviewing framework
-                        applies to all senior software engineers.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Will you sell my information?</h4>
-                    <p>Never. Your data is strictly private and used only to communicate directly with you.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Do I need to book a coaching call?</h4>
-                    <p>No. The audit results stand on their own. 1:1 mentorship is optional if you want structured
-                        acceleration.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>What happens after I complete the audit?</h4>
-                    <p>You'll see your instant breakdown and can optionally request a detailed followup or free
-                        strategic resources.</p>
+                <h3 style="font-size: 1.3rem; margin-bottom: 4px;">Your Download Has Started!</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+                    If the file didn't start downloading automatically, click below:
+                </p>
+
+                <!-- Primary Resource Download CTA -->
+                <a id="manualDownloadBtn" href="#" download class="btn btn-secondary btn-full"
+                    style="margin-bottom: 12px;">
+                    Download PDF File
+                </a>
+
+                <!-- Updated Two-Path Conversion Options -->
+                <div class="post-download-offers">
+                    <h4>Want to go further?</h4>
+
+                    <!-- Path 1: Personalized Guidance -->
+                    <div class="offer-block">
+                        <h5>Need personalized guidance?</h5>
+                        <p>Get direct help with your career situation, positioning, interviews, or next move.</p>
+                        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener"
+                            class="btn-offer-primary">
+                            Book a 1:1 Career Strategy →
+                        </a>
+                    </div>
+
+                    <!-- Path 2: Self-Guided / DIY -->
+                    <div class="offer-block">
+                        <h5>Prefer to do it yourself?</h5>
+                        <p>Explore practical developer playbooks, interview systems, career toolkits, and other digital
+                            products.</p>
+                        <a href="https://topmate.io/sandip_jaiswar" target="_blank" rel="noopener"
+                            class="btn-offer-secondary">
+                            Explore Digital Products →
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Know what's holding you back.<br>Then decide what to do about it.</h2>
-            <a href="#audit" class="btn btn-primary" style="margin-top: 24px;">Start Your Free Career Audit</a>
-        </div>
-    </section>
+            <!-- Main Form Container -->
+            <div id="modalFormContent">
+                <h3 id="modalTitle" style="font-size: 1.4rem; margin-bottom: 6px;">Where should I send it?</h3>
+                <p id="modalSub" style="font-size: 0.9rem; margin-bottom: 24px;">Requesting: <span
+                        id="resourceNameDisplay" class="gradient-text" style="font-weight: 600;">Resource</span></p>
 
+                <form action="https://formsubmit.co/ajax/sandipjaiswar@gmail.com" method="POST" id="leadForm"
+                    onsubmit="handleFormSubmit(event)">
+
+                    <!-- FormSubmit Hidden Parameters -->
+                    <input type="hidden" name="_subject" value="New Developer Career Resource Lead">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="resource_requested" id="resourceRequestedInput" value="">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="first_name" class="form-control" placeholder="e.g. Alex"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="alex@example.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentRole">Current Role</label>
+                        <input type="text" id="currentRole" name="current_role" class="form-control"
+                            placeholder="e.g. Senior React Developer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <input type="text" id="experience" name="experience" class="form-control" placeholder="e.g. 6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetRole">Target Role</label>
+                        <input type="text" id="targetRole" name="target_role" class="form-control"
+                            placeholder="e.g. Frontend Architect">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter_opt_in" checked>
+                        <label for="newsletter">I'd like to receive useful career resources and updates for
+                            developers.</label>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-full">
+                        <span id="btnText">Send Me The Resource</span>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Sandip Jaiswar. All rights reserved. • <a href="https://sandipjaiswar.com"
-                    style="color: var(--text-muted);">sandipjaiswar.com</a></p>
+            <p><strong>Sandip Jaiswar</strong> • Frontend Architect & Career Strategist</p>
+            <p style="font-size: 0.8rem; margin-top: 4px;">Helping experienced developers get clearer about their next
+                career move.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://sandipjaiswar.com">Website</a>
+                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener">Topmate</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Audit Logic & Data Structure -->
+    <!-- JavaScript Implementation -->
     <script>
-        // Event Hook Placeholder Function
-        function trackEvent(eventName, payload = {}) {
-            console.log(`[Analytics Event]: ${eventName}`, payload);
-            // Example integration:
-            // if (window.gtag) gtag('event', eventName, payload);
-        }
+        const resourceDownloadUrls = {
+            "Developer Career Audit":
+                "https://sandipjaiswar.com/resources/developer-career-audit.pdf",
 
-        const auditData = [
-            {
-                id: 1,
-                question: "Can a recruiter understand what type of developer you are and what problems you solve within 10 seconds of seeing your profile?",
-                category: "Positioning",
-                options: [
-                    { text: "Yes, very clearly", weight: 1.0 },
-                    { text: "Somewhat", weight: 0.6 },
-                    { text: "Not really", weight: 0.2 },
-                    { text: "I'm not sure", weight: 0.0 }
-                ]
-            },
-            {
-                id: 2,
-                question: "Does your resume show measurable outcomes (e.g., performance metrics, business value), rather than mostly technical responsibilities?",
-                category: "Resume",
-                options: [
-                    { text: "Yes, heavily focused on outcomes", weight: 1.0 },
-                    { text: "It has a mix of both", weight: 0.6 },
-                    { text: "Mostly lists duties and tech stacks", weight: 0.2 },
-                    { text: "No, it is purely technical tasks", weight: 0.0 }
-                ]
-            },
-            {
-                id: 3,
-                question: "Can you clearly articulate the tradeoffs behind the most critical technical and architectural decisions you've made?",
-                category: "Technical Storytelling",
-                options: [
-                    { text: "Yes, comfortably", weight: 1.0 },
-                    { text: "I can explain what I built, but struggle with tradeoffs", weight: 0.5 },
-                    { text: "I rarely get asked or practice this", weight: 0.2 },
-                    { text: "I struggle to summarize decisions concisely", weight: 0.0 }
-                ]
-            },
-            {
-                id: 4,
-                question: "Can you explain your impact beyond writing code (e.g., mentoring, architecture alignment, process improvements)?",
-                category: "Technical Storytelling",
-                options: [
-                    { text: "Yes, with concrete examples", weight: 1.0 },
-                    { text: "I have examples but haven't structured them", weight: 0.6 },
-                    { text: "I focus primarily on code delivery", weight: 0.2 },
-                    { text: "I haven't thought about this", weight: 0.0 }
-                ]
-            },
-            {
-                id: 5,
-                question: "Do you have a clear target role, company size, and domain for your next career move?",
-                category: "Career Direction",
-                options: [
-                    { text: "Yes, precise target parameters", weight: 1.0 },
-                    { text: "Rough idea, but keeping options open", weight: 0.6 },
-                    { text: "Applying to anything that matches my stack", weight: 0.2 },
-                    { text: "No clear direction right now", weight: 0.0 }
-                ]
-            },
-            {
-                id: 6,
-                question: "Can you confidently answer senior-level behavioral and system/architecture questions under pressure?",
-                category: "Interview Readiness",
-                options: [
-                    { text: "Very confident with structured answers", weight: 1.0 },
-                    { text: "Fairly confident, but hit-or-miss", weight: 0.6 },
-                    { text: "Usually feel unprepared for behavioral/architecture", weight: 0.2 },
-                    { text: "Not confident at all", weight: 0.0 }
-                ]
-            },
-            {
-                id: 7,
-                question: "Are you consistently getting inbound outreach or interview opportunities for roles you actually want?",
-                category: "Job Search Strategy",
-                options: [
-                    { text: "Yes, steady flow of relevant leads", weight: 1.0 },
-                    { text: "Some outreach, but mostly irrelevant roles", weight: 0.5 },
-                    { text: "Low response rate from outbound applications", weight: 0.2 },
-                    { text: "Almost no activity or interviews", weight: 0.0 }
-                ]
-            },
-            {
-                id: 8,
-                question: "Does your LinkedIn profile position you for the roles you want next, rather than just documenting where you've been?",
-                category: "Positioning",
-                options: [
-                    { text: "Optimized for my future target role", weight: 1.0 },
-                    { text: "It's basically an online resume", weight: 0.6 },
-                    { text: "Outdated or incomplete", weight: 0.2 },
-                    { text: "Barely use LinkedIn", weight: 0.0 }
-                ]
-            },
-            {
-                id: 9,
-                question: "Do you have a clear narrative connecting your past experience to the value you'll bring to your next team?",
-                category: "Career Direction",
-                options: [
-                    { text: "Yes, a compelling narrative ready", weight: 1.0 },
-                    { text: "I have pieces, but no cohesive story", weight: 0.6 },
-                    { text: "I just list my past job titles", weight: 0.2 },
-                    { text: "No narrative prepared", weight: 0.0 }
-                ]
-            },
-            {
-                id: 10,
-                question: "If you were interviewing for your dream senior engineering role tomorrow, how confident would you feel?",
-                category: "Interview Readiness",
-                options: [
-                    { text: "100% prepared and ready", weight: 1.0 },
-                    { text: "70% ready—would need quick review", weight: 0.6 },
-                    { text: "40% ready—would feel anxious", weight: 0.2 },
-                    { text: "Unprepared", weight: 0.0 }
-                ]
-            }
-        ];
+            "Resume Review Checklist":
+                "https://sandipjaiswar.com/resources/senior-developer-resume-playbook.pdf",
 
-        const categoryRecommendations = {
-            "Positioning": {
-                headline: "Your experience may not be the problem. Your positioning is.",
-                tips: [
-                    "Rewrite your LinkedIn headline around the specific engineering problems you solve rather than generic job titles.",
-                    "Frame your primary skill set around architecture and solution patterns rather than a long laundry list of tools.",
-                    "Ensure your profile summary explicitly mentions the business scale (e.g., traffic, team size, performance) you handle."
-                ]
-            },
-            "Resume": {
-                headline: "Your technical contributions are hidden behind task lists.",
-                tips: [
-                    "Replace task-oriented bullets with impact metrics (e.g., 'Reduced bundle size by 35%' instead of 'Wrote React code').",
-                    "Structure your accomplishments using the Action + Context + Measurable Outcome framework.",
-                    "Remove legacy technologies that distract from your current senior-level target capabilities."
-                ]
-            },
-            "Technical Storytelling": {
-                headline: "You're building great software, but not framing technical trade-offs.",
-                tips: [
-                    "Prepare 5 structured stories using the STAR method that demonstrate system tradeoffs and engineering judgment.",
-                    "Practice explaining complex technical architecture decisions in simple, business-aligned terms.",
-                    "Highlight non-coding impact: mentoring, refactoring decisions, cross-team alignment, and technical standards."
-                ]
-            },
-            "Interview Readiness": {
-                headline: "Your technical depth isn't translating into interview confidence.",
-                tips: [
-                    "Conduct mock interviews focusing on high-level system design and frontend architecture paradigms.",
-                    "Prepare clear, structured responses for senior-level behavioral questions regarding conflict and ambiguity.",
-                    "Develop a strong 90-second intro story that immediately establishes engineering authority."
-                ]
-            },
-            "Career Direction": {
-                headline: "A broader job search strategy will accelerate your progress.",
-                tips: [
-                    "Narrow down your target persona (e.g., Staff Frontend Engineer at mid-sized SaaS) to align your messaging.",
-                    "Build a dedicated bridge narrative explaining why your background logically leads to your next target role.",
-                    "Focus on direct networking and referral loops rather than generic mass application portals."
-                ]
-            },
-            "Job Search Strategy": {
-                headline: "Your outbound outreach needs systematic positioning.",
-                tips: [
-                    "Shift from reactive applying to warm inbound positioning via optimized profiles and active engineering presence.",
-                    "Target internal engineering hiring managers directly with concise, value-focused messages.",
-                    "Audit your application pipeline to identify whether the drop-off is at resume screening or technical rounds."
-                ]
-            }
+            "Senior Interview Prep Checklist":
+                "https://sandipjaiswar.com/resources/senior-developer-interview-playbook.pdf",
+
+            "Career Positioning Framework":
+                "https://sandipjaiswar.com/resources/developer-career-positioning-framework.pdf",
+
+            "Promotion Readiness Checklist":
+                "https://sandipjaiswar.com/resources/senior-developer-promotion-readiness.pdf",
+
+            "Frontend Developer → AI Roadmap":
+                "https://sandipjaiswar.com/resources/Frontend Developer → AI Roadmap.pdf"
         };
 
-        let currentQuestionIndex = 0;
-        let categoryScores = {
-            "Positioning": { total: 0, count: 0 },
-            "Resume": { total: 0, count: 0 },
-            "Technical Storytelling": { total: 0, count: 0 },
-            "Interview Readiness": { total: 0, count: 0 },
-            "Career Direction": { total: 0, count: 0 },
-            "Job Search Strategy": { total: 0, count: 0 }
-        };
-        let auditStarted = false;
+        const modal = document.getElementById('leadModal');
+        const resourceDisplay = document.getElementById('resourceNameDisplay');
+        const resourceInput = document.getElementById('resourceRequestedInput');
+        const modalFormContent = document.getElementById('modalFormContent');
+        const modalSuccessState = document.getElementById('modalSuccessState');
+        let lastFocusedElement = null;
 
-        function renderQuestion() {
-            const q = auditData[currentQuestionIndex];
-            document.getElementById('question-step').innerText = `Question ${currentQuestionIndex + 1} of ${auditData.length}`;
-            document.getElementById('question-text').innerText = q.question;
+        function openResourceModal(title, key) {
+            lastFocusedElement = document.activeElement;
+            resourceDisplay.innerText = title;
+            resourceInput.value = title;
 
-            const progressPercent = ((currentQuestionIndex + 1) / auditData.length) * 100;
-            document.getElementById('progress-bar').style.width = `${progressPercent}%`;
-
-            const optionsContainer = document.getElementById('options-container');
-            optionsContainer.innerHTML = '';
-
-            q.options.forEach((opt, idx) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = `<span>${opt.text}</span><span style="color: var(--text-muted); font-size: 0.85rem;">→</span>`;
-                btn.onclick = () => handleAnswer(q.category, opt.weight);
-                optionsContainer.appendChild(btn);
-            });
-        }
-
-        function handleAnswer(category, weight) {
-            if (!auditStarted) {
-                auditStarted = true;
-                trackEvent('audit_started');
+            // Set fallback download button link
+            const downloadBtn = document.getElementById('manualDownloadBtn');
+            if (downloadBtn) {
+                downloadBtn.href = resourceDownloadUrls[title] || '#';
             }
 
-            categoryScores[category].total += weight;
-            categoryScores[category].count += 1;
+            // Reset view to form state
+            modalFormContent.style.display = 'block';
+            modalSuccessState.style.display = 'none';
 
-            if (currentQuestionIndex < auditData.length - 1) {
-                currentQuestionIndex++;
-                renderQuestion();
-            } else {
-                finishAudit();
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.getElementById('firstName').focus();
+
+            document.addEventListener('keydown', handleKeydown);
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.removeEventListener('keydown', handleKeydown);
+            if (lastFocusedElement) lastFocusedElement.focus();
+        }
+
+        function handleKeydown(e) {
+            if (e.key === 'Escape') {
+                closeModal();
             }
         }
 
-        function finishAudit() {
-            trackEvent('audit_completed');
-
-            document.getElementById('audit').style.display = 'none';
-            const resultsSection = document.getElementById('results');
-            resultsSection.style.display = 'block';
-
-            // Calculate Total Score
-            let overallTotal = 0;
-            let overallCount = 0;
-            let lowestCategory = '';
-            let lowestPct = 101;
-
-            const catBarsContainer = document.getElementById('category-bars-container');
-            catBarsContainer.innerHTML = '';
-
-            Object.keys(categoryScores).forEach(cat => {
-                const item = categoryScores[cat];
-                const pct = item.count > 0 ? Math.round((item.total / item.count) * 100) : 0;
-
-                overallTotal += item.total;
-                overallCount += item.count;
-
-                if (pct < lowestPct) {
-                    lowestPct = pct;
-                    lowestCategory = cat;
-                }
-
-                // Render bar
-                const row = document.createElement('div');
-                row.className = 'category-row';
-                row.innerHTML = `
-          <div class="category-meta">
-            <span>${cat}</span>
-            <span style="font-weight: 600;">${pct}%</span>
-          </div>
-          <div class="cat-bar-bg">
-            <div class="cat-bar-fill" style="width: ${pct}%"></div>
-          </div>
-        `;
-                catBarsContainer.appendChild(row);
-            });
-
-            const totalScore = Math.round((overallTotal / overallCount) * 100);
-            document.getElementById('total-score-val').innerText = `${totalScore} / 100`;
-
-            // Score Badge
-            const badge = document.getElementById('score-category-label');
-            if (totalScore >= 80) {
-                badge.innerText = "Strong Foundation";
-            } else if (totalScore >= 60) {
-                badge.innerText = "Good Experience, Some Gaps";
-            } else if (totalScore >= 40) {
-                badge.innerText = "Your Experience Isn't Being Fully Utilized";
-            } else {
-                badge.innerText = "You Need a Clearer Career Strategy";
+        // Backdrop click close
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
             }
-
-            // Populate Dynamic Insight
-            const recData = categoryRecommendations[lowestCategory] || categoryRecommendations["Positioning"];
-            document.getElementById('dynamic-insight-text').innerText = recData.headline;
-
-            const recList = document.getElementById('dynamic-recommendations');
-            recList.innerHTML = '';
-            recData.tips.forEach(tip => {
-                const li = document.createElement('li');
-                li.innerText = tip;
-                recList.appendChild(li);
-            });
-
-            resultsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function handleLeadSubmit(e) {
-            e.preventDefault();
-            trackEvent('lead_submitted', {
-                firstName: document.getElementById('first-name').value,
-                email: document.getElementById('email').value,
-                role: document.getElementById('current-role').value
-            });
-
-            alert("Thank you! Your full career evaluation report and resources have been sent to your email.");
-            document.getElementById('lead-form').reset();
-        }
-
-        // Attach tracking to standard CTAs
-        document.addEventListener('DOMContentLoaded', () => {
-            renderQuestion();
-
-            document.getElementById('start-audit-btn').addEventListener('click', () => {
-                trackEvent('audit_started');
-            });
-
-            document.getElementById('service-1on1-btn').addEventListener('click', () => {
-                trackEvent('service_cta_clicked');
-            });
-
-            const leadInputs = document.querySelectorAll('#lead-form input');
-            leadInputs.forEach(input => {
-                input.addEventListener('focus', () => {
-                    trackEvent('lead_form_started');
-                }, { once: true });
-            });
         });
+
+        // Function to trigger direct file download
+        function triggerFileDownload(resourceName) {
+            const downloadUrl = resourceDownloadUrls[resourceName] || resourceDownloadUrls["Resume Review Checklist"];
+
+            if (downloadUrl) {
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = downloadUrl.split('/').pop() || 'resource.pdf';
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        // AJAX Submission Engine
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+
+            submitBtn.disabled = true;
+            btnText.innerText = 'Sending & Downloading...';
+
+            const formData = new FormData(form);
+            const requestedResource = document.getElementById('resourceRequestedInput').value;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Trigger file download
+                    triggerFileDownload(requestedResource);
+
+                    // Switch to in-modal success view
+                    modalFormContent.style.display = 'none';
+                    modalSuccessState.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error('Server returned non-200 state');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                btnText.innerText = 'Error! Try Again';
+            } finally {
+                submitBtn.disabled = false;
+                btnText.innerText = 'Send Me The Resource';
+            }
+        }
     </script>
 </body>
 
