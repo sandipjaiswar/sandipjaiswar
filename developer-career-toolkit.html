@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Career Resources for Developers | Sandip Jaiswar</title>
+  <meta name="description" content="Practical frameworks, checklists, and guides to help experienced software developers position their experience, excel in interviews, and navigate career growth.">
+  <link rel="canonical" href="https://sandipjaiswar.com/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Career Resources for Developers | Sandip Jaiswar">
+  <meta property="og:description" content="Practical frameworks, checklists, and guides created by Sandip Jaiswar (14+ yrs in Software Engineering) to help developers grow.">
+  <meta property="og:url" content="https://sandipjaiswar.com/">
+  <meta property="og:image" content="https://sandipjaiswar.com/og-image.jpg">
+
+  <!-- Favicon Placeholder -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <style>
+    /* DESIGN SYSTEM & VARIABLES */
+    :root {
+      --bg-main: #0B0F14;
+      --bg-card: #11161D;
+      --bg-card-hover: #171E28;
+      --border-color: #1F2937;
+      --border-focus: #8B5CF6;
+      --text-main: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --accent-purple: #8B5CF6;
+      --accent-gradient: linear-gradient(135deg, #A855F7 0%, #6366F1 100%);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      outline: none;
+    }
+
+    .btn:focus-visible {
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-main);
+      border-color: var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-purple);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* HEADER / NAV */
+    nav {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    /* SECTION 1: HERO */
+    .hero {
+      padding: 96px 0 64px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+
+    .credibility-line {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* SECTION 2: TRUST / POSITIONING */
+    .trust-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .trust-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+    }
+
+    .trust-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .trust-item {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    /* SECTION 3: RESOURCE COLLECTION */
+    .resources-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .resource-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .resource-card:hover {
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: translateY(-2px);
+      background: var(--bg-card-hover);
+    }
+
+    .resource-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .resource-card p {
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .card-btn {
+      background: transparent;
+      color: var(--accent-purple);
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card-btn:hover {
+      color: #A855F7;
+    }
+
+    /* SECTION 5: VALUE PROMISE */
+    .value-promise {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .promise-card {
+      background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-main) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .promise-card h2 {
+      font-size: 1.75rem;
+      margin-bottom: 16px;
+    }
+
+    /* SECTION 6: SOFT SERVICE CTA */
+    .service-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent-gradient);
+    }
+
+    .service-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .service-pillars {
+      font-size: 0.875rem;
+      color: var(--accent-purple);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+
+    /* SECTION 7: ABOUT SANDIP */
+    .about-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+    }
+
+    .about-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .about-card p {
+      margin-bottom: 12px;
+    }
+
+    /* MODAL SYSTEM */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 15, 20, 0.85);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      max-width: 520px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      transform: translateY(12px);
+      transition: transform 0.25s ease;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: var(--text-main);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .checkbox-group input {
+      margin-top: 4px;
+      accent-color: var(--accent-purple);
+    }
+
+    .checkbox-group label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 48px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-main);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .hero p { font-size: 1.1rem; }
+      .hero-ctas { flex-direction: column; }
+      .btn { width: 100%; }
+      .trust-card, .service-card, .about-card, .modal-card { padding: 24px; }
+      .resource-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-content">
+      <a href="https://sandipjaiswar.com" class="brand">Sandip Jaiswar</a>
+      <!-- CONFIGURABLE: Topmate URL placeholder -->
+      <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.875rem;">1:1 Strategy</a>
+    </div>
+  </nav>
+
+  <!-- Section 1: Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Free Career Resources <br><span class="gradient-text">for Developers</span></h1>
+      <p>Practical frameworks, checklists, and guides to help you position your experience, prepare for interviews, and make your next career move with clarity.</p>
+      <div class="credibility-line">Created by Sandip Jaiswar • 14+ years in software engineering</div>
+      <div class="hero-ctas">
+        <a href="#resources" class="btn btn-primary">Get the Free Resources</a>
+        <!-- CONFIGURABLE: Topmate URL placeholder -->
+        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener" class="btn btn-secondary">Explore 1:1 Career Strategy</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Trust / Positioning -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-card">
+        <h2>Good developers don't always get good opportunities.</h2>
+        <p>Career progression in tech is rarely a pure meritocracy of technical ability. Growing your senior career requires distinct non-coding skill sets:</p>
+        <div class="trust-grid">
+          <div class="trust-item">→ Strategic positioning for target roles</div>
+          <div class="trust-item">→ Resumes that highlight business impact</div>
+          <div class="trust-item">→ High-level technical storytelling</div>
+          <div class="trust-item">→ Clear long-term career direction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Resource Collection -->
+  <section class="resources-section" id="resources">
+    <div class="container">
+      <div class="section-title">
+        <h2>Select a Resource</h2>
+        <p>Direct, actionable toolkits built from senior engineering experience.</p>
+      </div>
+
+      <div class="resource-grid">
+        
+        <div class="resource-card">
+          <div>
+            <h3>Developer Career Audit</h3>
+            <p>Identify the specific gaps between where your career is today and where you want it to go.</p>
+          </div>
+          <button class="card-btn" onclick="openResourceModal('Developer Career Audit', 'careerAudit')">Get Free Resource →</button>
+        </div>
+
+        <div class="resource-card">
+          <div>
+            <h3>Resume Review Checklist</h3>
+            <p>A practical checklist to identify weak points and duty-heavy language in your developer resume.</p>
+          </div>
+          <button class="card-btn" onclick="openResourceModal('Resume Review Checklist', 'resumeChecklist')">Get Free Resource →</button>
+        </div>
+
+        <div class="resource-card">
+          <div>
+            <h3>Senior Interview Prep Checklist</h3>
+            <p>Prepare for technical, behavioral, and architectural conversations without memorizing generic answers.</p>
+          </div>
+          <button class="card-btn" onclick="openResourceModal('Senior Interview Prep Checklist', 'interviewChecklist')">Get Free Resource →</button>
+        </div>
+
+        <div class="resource-card">
+          <div>
+            <h3>Career Positioning Framework</h3>
+            <p>Turn your accumulated years of engineering experience into a clear, cohesive professional story.</p>
+          </div>
+          <button class="card-btn" onclick="openResourceModal('Career Positioning Framework', 'positioningFramework')">Get Free Resource →</button>
+        </div>
+
+        <div class="resource-card">
+          <div>
+            <h3>Promotion Readiness Checklist</h3>
+            <p>Evaluate whether you're genuinely ready for the next level—beyond simply adding years of experience.</p>
+          </div>
+          <button class="card-btn" onclick="openResourceModal('Promotion Readiness Checklist', 'promotionChecklist')">Get Free Resource →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Value Promise -->
+  <section class="value-promise">
+    <div class="container">
+      <div class="promise-card">
+        <h2>Free doesn't mean generic.</h2>
+        <p>These resources are built from real-world software engineering and leadership experience—designed to help you make better decisions, not just consume more career advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Soft Service CTA -->
+  <section class="service-section">
+    <div class="container">
+      <div class="service-card">
+        <h2>Want help applying this to your situation?</h2>
+        <p style="max-width: 600px; margin: 8px auto 24px;">Sometimes the problem isn't your experience. It's how that experience is positioned, communicated, and applied to your next move.</p>
+        <!-- CONFIGURABLE: Topmate URL placeholder -->
+        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener" class="btn btn-primary">Explore 1:1 Career Strategy →</a>
+        <div class="service-pillars">Resume • Positioning • Interview Strategy • Career Direction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: About Sandip -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-card">
+        <h2>Built by someone who's been on both sides of the interview.</h2>
+        <p>I've spent 14+ years in software engineering, evolving from frontend engineering into technical leadership and architecture.</p>
+        <p>Along the way, I've conducted technical interviews, evaluated resumes, worked with product and business teams, and helped developers position their work to secure stronger roles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Lead Capture Modal -->
+  <div class="modal-overlay" id="leadModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close dialog">&times;</button>
+      
+      <!-- In-Place Success Message Container -->
+      <div id="modalSuccessState" style="display: none; text-align: center; padding: 12px 0;">
+        <div style="width: 56px; height: 56px; background: rgba(139, 92, 246, 0.15); border: 1px solid var(--accent-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Resource Sent!</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 24px;">Check your inbox shortly for your requested guide.</p>
+        <!-- CONFIGURABLE: Topmate URL placeholder -->
+        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener" class="btn btn-primary btn-full">Explore 1:1 Career Strategy →</a>
+      </div>
+
+      <!-- Main Form Container -->
+      <div id="modalFormContent">
+        <h3 id="modalTitle" style="font-size: 1.4rem; margin-bottom: 6px;">Where should I send it?</h3>
+        <p id="modalSub" style="font-size: 0.9rem; margin-bottom: 24px;">Requesting: <span id="resourceNameDisplay" class="gradient-text" style="font-weight: 600;">Resource</span></p>
+
+        <!-- CONFIGURABLE: FormSubmit Action URL placeholder (using /ajax/) -->
+        <form action="https://formsubmit.co/ajax/sandipjaiswar@gmail.com" method="POST" id="leadForm" onsubmit="handleFormSubmit(event)">
+          
+          <!-- FormSubmit Hidden Parameters -->
+          <input type="hidden" name="_subject" value="New Developer Career Resource Lead">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="resource_requested" id="resourceRequestedInput" value="">
+
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="first_name" class="form-control" placeholder="e.g. Alex" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="alex@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="currentRole">Current Role</label>
+            <input type="text" id="currentRole" name="current_role" class="form-control" placeholder="e.g. Senior React Developer">
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="text" id="experience" name="experience" class="form-control" placeholder="e.g. 6">
+          </div>
+
+          <div class="form-group">
+            <label for="targetRole">Target Role</label>
+            <input type="text" id="targetRole" name="target_role" class="form-control" placeholder="e.g. Frontend Architect">
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter_opt_in" checked>
+            <label for="newsletter">I'd like to receive useful career resources and updates for developers.</label>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary btn-full">
+            <span id="btnText">Send Me The Resource</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Sandip Jaiswar</strong> • Frontend Architect & Career Strategist</p>
+      <p style="font-size: 0.8rem; margin-top: 4px;">Helping experienced developers get clearer about their next career move.</p>
+      <div class="footer-links">
+        <!-- CONFIGURABLE: External Link Placeholders -->
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN_HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://sandipjaiswar.com">Website</a>
+        <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener">Topmate</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Implementation -->
+  <script>
+    // CONFIGURABLE: Replace with your actual hosted resource files
+    const resources = {
+      careerAudit: "https://sandipjaiswar.com/resources/developer-career-audit.pdf",
+      resumeChecklist: "https://sandipjaiswar.com/resources/resume-review-checklist.pdf",
+      interviewChecklist: "https://sandipjaiswar.com/resources/senior-interview-prep.pdf",
+      positioningFramework: "https://sandipjaiswar.com/resources/career-positioning-framework.pdf",
+      promotionChecklist: "https://sandipjaiswar.com/resources/promotion-readiness-checklist.pdf"
+    };
+
+    const modal = document.getElementById('leadModal');
+    const resourceDisplay = document.getElementById('resourceNameDisplay');
+    const resourceInput = document.getElementById('resourceRequestedInput');
+    const modalFormContent = document.getElementById('modalFormContent');
+    const modalSuccessState = document.getElementById('modalSuccessState');
+    let lastFocusedElement = null;
+
+    function openResourceModal(title, key) {
+      lastFocusedElement = document.activeElement;
+      resourceDisplay.innerText = title;
+      resourceInput.value = title;
+      
+      // Reset view to form state
+      modalFormContent.style.display = 'block';
+      modalSuccessState.style.display = 'none';
+      
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.getElementById('firstName').focus();
+      
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.removeEventListener('keydown', handleKeydown);
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    function handleKeydown(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    }
+
+    // Backdrop click close
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // AJAX Submission Engine
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+
+      submitBtn.disabled = true;
+      btnText.innerText = 'Sending...';
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Switch to in-modal success view
+          modalFormContent.style.display = 'none';
+          modalSuccessState.style.display = 'block';
+          form.reset();
+        } else {
+          throw new Error('Server returned non-200 state');
+        }
+      } catch (error) {
+        console.error('Submission error:', error);
+        btnText.innerText = 'Error! Try Again';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.innerText = 'Send Me The Resource';
+      }
+    }
+  </script>
+</body>
+</html>
