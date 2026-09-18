@@ -445,6 +445,115 @@
             margin-bottom: 12px;
         }
 
+        /* PERSONAL BRANDING */
+        .personal-note-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .personal-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 4px;
+        }
+
+        .personal-note .note-label {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: var(--accent-purple);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .personal-note blockquote {
+            margin: 0;
+            color: var(--text-main);
+            font-size: 1.3rem;
+            line-height: 1.55;
+            letter-spacing: -0.01em;
+        }
+
+        .personal-note .note-signoff {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .profile-section {
+            padding: 64px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .profile-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 24px;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 32px;
+        }
+
+        .profile-mark {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            border: 1px solid rgba(139, 92, 246, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            background: rgba(139, 92, 246, 0.08);
+            flex-shrink: 0;
+        }
+
+        .profile-copy h2 {
+            font-size: 1.35rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-copy p {
+            font-size: 0.92rem;
+            margin: 0;
+        }
+
+        .profile-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .profile-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: var(--transition);
+            background: transparent;
+        }
+
+        .profile-link:hover {
+            border-color: var(--accent-purple);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .profile-link.primary {
+            border-color: rgba(139, 92, 246, 0.45);
+            color: #FFFFFF;
+        }
+
         /* MODAL SYSTEM */
         .modal-overlay {
             position: fixed;
@@ -689,6 +798,23 @@
             .next-steps-grid {
                 grid-template-columns: 1fr;
             }
+
+            .profile-card {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .profile-links {
+                justify-content: flex-start;
+            }
+
+            .profile-link {
+                width: 100%;
+            }
+
+            .personal-note blockquote {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -897,6 +1023,39 @@
         </div>
     </section>
 
+    <!-- Personal note from Sandip -->
+    <section class="personal-note-section">
+        <div class="container">
+            <div class="personal-note">
+                <span class="note-label">A note from Sandip</span>
+                <blockquote>
+                    You don't need to learn everything or follow every trend. The better question is: what is actually
+                    stopping you from reaching your next role, and what is the smallest important gap you need to fix
+                    next? That is how I think about career growth after 14+ years in engineering.
+                </blockquote>
+                <div class="note-signoff">— Sandip Jaiswar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal brand / profile links -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-mark" aria-hidden="true">SJ</div>
+                <div class="profile-copy">
+                    <h2>Sandip Jaiswar</h2>
+                    <p>Frontend Architect &amp; Career Strategist · 14+ years in software engineering</p>
+                </div>
+                <div class="profile-links" aria-label="Sandip Jaiswar profiles">
+                    <a class="profile-link primary" href="https://sandipjaiswar.com">Visit Homepage →</a>
+                    <a class="profile-link" href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="profile-link" href="https://topmate.io/sandip_jaiswar" target="_blank" rel="noopener">Topmate Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section 4: Lead Capture Modal -->
     <div class="modal-overlay" id="leadModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
         <div class="modal-card">
@@ -1017,8 +1176,8 @@
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/sandip-jaiswar-95995891/" target="_blank"
                     rel="noopener">LinkedIn</a>
-                <a href="https://sandipjaiswar.com">Website</a>
-                <a href="https://topmate.io/sandip_jaiswar/2016575" target="_blank" rel="noopener">Topmate</a>
+                <a href="https://sandipjaiswar.com">Homepage</a>
+                <a href="https://topmate.io/sandip_jaiswar" target="_blank" rel="noopener">Topmate Profile</a>
             </div>
         </div>
     </footer>
